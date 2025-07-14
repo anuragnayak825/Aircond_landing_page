@@ -30,16 +30,16 @@ export default function Header() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="w-full bg-[#1c63b8] shadow-xl z-50"
+        className="w-full sticky top-0 bg-[#1c63b8] shadow-xl z-50"
       >
-        <div className="max-w-[1280px] mx-auto flex md:flex-row justify-between items-center px-6 sm:px-8 md:px-12 lg:px-16 py-3 gap-4">
+        <div className="max-w-[1280px] mx-auto flex md:flex-row justify-between items-center px-6 sm:px-8 md:px-12 lg:px-16 py-1 gap-4">
 
           {/* Logo & Brand */}
           <div className="flex items-center gap-3">
             <img
               src={logo}
               alt="Cool N Cool Logo"
-              className="w-[65px] h-[65px] object-contain drop-shadow-md"
+              className="w-[90px] h-[90px] object-contain drop-shadow-md"
             />
             <div className="sm:block">
               <h1 className="text-xs sm:text-xl md:text-xl font-bold leading-tight">
