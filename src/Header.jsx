@@ -5,58 +5,90 @@ import logo from './assets/logo-ac.webp';
 
 export default function Header() {
     return (
-        <motion.header
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="w-full bg-[#1c63b8] shadow-xl z-50"
-        >
-            <div className="max-w-[1280px] mx-auto flex md:flex-row justify-between items-center px-6 sm:px-8 md:px-12 lg:px-16 py-3 gap-3 sm:gap-4">
-                {/* Logo & Brand */}
-                <div className="flex items-center gap-3">
-                    <img
-                        src={logo}
-                        alt="Cool N Cool Logo"
-                        className="w-[65px] h-[65px] object-contain drop-shadow-md"
-                    />
-                    <div className="hidden sm:block md:block lg:block xl:block 2xl:block">
-                        <h1 className="text-lg sm:text-xl md:text-xl font-bold leading-tight">
-                            <span className="text-[#F9B233]">A</span>
-                            <span className="text-[#F9B233]">C</span>{' '}
-                            <span className="text-white">COOL N COOL</span>
-                        </h1>
-                        <p className="text-xs sm:text-sm text-yellow-100">Engineering Services</p>
+        <>
+            {/* 🔁 Zoom Animation Keyframes */}
+            <style>
+                {`
+          @keyframes zoomInOut {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+          }
+          .animate-zoom {
+            animation: zoomInOut 2s ease-in-out infinite;
+          }
+        `}
+            </style>
+
+            <motion.header
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
+                className="w-full bg-[#1c63b8] shadow-xl z-50"
+            >
+                <div className="max-w-[1280px] mx-auto flex md:flex-row justify-between items-center px-6 sm:px-8 md:px-12 lg:px-16 py-3 gap-4">
+
+                    {/* Logo & Brand */}
+                    <div className="flex items-center gap-3">
+                        <img
+                            src={logo}
+                            alt="Cool N Cool Logo"
+                            className="w-[65px] h-[65px] object-contain drop-shadow-md"
+                        />
+                        <div className="hidden sm:block">
+                            <h1 className="text-lg sm:text-xl md:text-xl font-bold leading-tight">
+                                <span className="text-[#F9B233]">A</span>
+                                <span className="text-[#F9B233]">C</span>{' '}
+                                <span className="text-white">COOL N COOL</span>
+                            </h1>
+                            <p className="text-xs sm:text-sm text-yellow-100">Engineering Services</p>
+                        </div>
+                    </div>
+
+                    {/* Contact Buttons */}
+                    <div className="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6">
+
+                        {/* 📞 Phone Button */}
+                        <motion.a
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            href="tel:+60163824522"
+                            className="group flex items-center justify-center text-[#1c63b8] font-semibold rounded-full overflow-hidden transition-all shadow-md hover:shadow-lg bg-white"
+                        >
+                            {/* Icon on small screens */}
+                            <span className="w-auto p-2.5 gap-x-2.5 sm:w-11 sm:h-11 flex items-center justify-center rounded-full bg-[white] md:hidden">
+                                <FaPhoneAlt className="text-base sm:text-lg" />
+                                Call Us
+                            </span>
+                            {/* Full text on md+ */}
+                            <span className="hidden md:flex items-center gap-2 px-5 py-2.5 xl:px-6 xl:py-3 text-sm xl:text-base 2xl:text-lg">
+                                <FaPhoneAlt className="text-lg xl:text-xl 2xl:text-2xl" />
+                                Call Us: +60 16-382 4522
+                            </span>
+                        </motion.a>
+
+                        {/* 💬 WhatsApp Button */}
+                        <motion.a
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            href="https://wa.me/60123456789"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group animate-zoom flex items-center justify-center text-white font-semibold rounded-full overflow-hidden transition-all shadow-md hover:shadow-lg bg-green-600 hover:bg-green-700"
+                        >
+                            {/* Icon only on small */}
+                            <span className="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-full bg-green-600 md:hidden">
+                                <FaWhatsapp className="text-base sm:text-lg" />
+                            </span>
+                            {/* Full text on md+ */}
+                            <span className="hidden md:flex items-center gap-2 px-5 py-2.5 xl:px-6 xl:py-3 text-sm xl:text-base 2xl:text-lg">
+                                <FaWhatsapp className="text-lg xl:text-xl 2xl:text-2xl" />
+                                Contact On WhatsApp
+                            </span>
+                        </motion.a>
+
                     </div>
                 </div>
-
-                {/* Contact Buttons */}
-                <div className="flex  gap-3 sm:gap-5 items-center justify-center">
-                    {/* Phone Button */}
-                    <motion.a
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        href="tel:+60163824522"
-                        className="flex items-center gap-2 bg-white text-[#1c63b8] font-semibold text-sm sm:text-lg px-4 sm:px-6 py-2 rounded-full sm:rounded-md shadow hover:bg-gray-100 transition"
-                    >
-                        <FaPhoneAlt className="text-xl" />
-                        <span className="hidden md:inline">+60 16-382 4522</span>
-                        <span className="inline md:hidden">Call Us</span>
-                    </motion.a>
-
-                    {/* WhatsApp Button */}
-                    <motion.a
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        href="https://wa.me/60123456789"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-green-500 text-white font-semibold text-sm sm:text-2xl px-4 sm:px-4 sm:py-4 py-2 rounded-full sm:rounded- shadow hover:bg-yellow-500 transition"
-                    >
-                        <FaWhatsapp className="text-xl sm:text-2xl " />
-                        <span className="hidden md:inline">Contact On WhatsApp</span>
-                    </motion.a>
-                </div>
-            </div>
-        </motion.header>
+            </motion.header>
+        </>
     );
 }
