@@ -34,8 +34,8 @@ export default function Header() {
                             alt="Cool N Cool Logo"
                             className="w-[65px] h-[65px] object-contain drop-shadow-md"
                         />
-                        <div className="hidden sm:block">
-                            <h1 className="text-lg sm:text-xl md:text-xl font-bold leading-tight">
+                        <div className=" sm:block">
+                            <h1 className="text-xs sm:text-xl md:text-xl font-bold leading-tight">
                                 <span className="text-[#F9B233]">A</span>
                                 <span className="text-[#F9B233]">C</span>{' '}
                                 <span className="text-white">COOL N COOL</span>
@@ -55,7 +55,7 @@ export default function Header() {
                             className="group flex items-center justify-center text-[#1c63b8] font-semibold rounded-full overflow-hidden transition-all shadow-md hover:shadow-lg bg-white"
                         >
                             {/* Icon on small screens */}
-                            <span className="w-auto p-2.5 gap-x-2.5 sm:w-11 sm:h-11 flex items-center justify-center rounded-full bg-[white] md:hidden">
+                            <span className="w-auto p-2.5 gap-x-2.5  flex items-center justify-center rounded-full bg-[white] md:hidden">
                                 <FaPhoneAlt className="text-base sm:text-lg" />
                                 Call Us
                             </span>
