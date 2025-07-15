@@ -13,18 +13,18 @@ const CoolTechSection = () => {
                         <img
                             src="https://cooltech-vite.vercel.app/assets/about2-1-BNuWFb_a.jpg"
                             alt="AC Installation"
-                            className="w-full rounded"
+                            className="w-full "
                         />
                         {/* Bottom Image */}
                         <img
                             src="https://cooltech-vite.vercel.app/assets/about2-2-CIil4rct.jpg"
                             alt="AC Maintenance"
-                            className="absolute bottom-0 right-0 w-full max-w-[50%] border-t-8 border-e-8 border-s-8 border-white rounded"
+                            className="absolute bottom-0 right-0 w-full max-w-[50%] border-t-8 border-e-8 border-s-8 border-white "
                         />
                     </div>
 
                     {/* Yellow Stripe */}
-                    <div className="w-[40px] sm:w-[50px] md:w-[60px] absolute top-3 left-[-15px] sm:left-[-24px] -rotate-6 h-[60vh] sm:h-[65vh] md:h-[70vh] bg-[#ffc513]"></div>
+                    <div className="w-[40px] sm:w-[50px] md:w-[60px] absolute top-3 left-[-15px] sm:left-[-24px] -rotate-6 h-[43vh] sm:h-[65vh] md:h-[70vh] bg-[#ffc513]"></div>
 
                     {/* Call Box */}
                     <div className="absolute top-6 left-6 z-[20] bg-white shadow-xl border-[#ffc513] p-4 pl-5 flex items-center space-x-3 max-w-[270px] rounded-md">
