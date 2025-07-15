@@ -22,7 +22,7 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
+    <div className="relative w-full h-fit lg:min-h-screen overflow-hidden">
       {/* 🔷 Background Swiper */}
       <div className="absolute top-0 left-0 w-full h-full -z-10">
         <Swiper
@@ -48,7 +48,7 @@ export default function HeroSection() {
       </div>
 
       {/* 🔷 Content (Text + Form) */}
-      <div className="relative w-full flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-8 lg:gap-10 xl:gap-10 2xl:gap-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28 pt-8 pb-4 sm:pt-10 sm:pb-6 lg:pt-16 lg:pb-10 z-10">
+      <div className="relative w-full flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-8 lg:gap-10 xl:gap-10 2xl:gap-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28 pt-3 pb-6 sm:pt-10 sm:pb-10 lg:pt-16 lg:pb-10 z-10">
 
         {/* 🔹 Text Section with Animation */}
         <motion.div
@@ -92,7 +92,7 @@ export default function HeroSection() {
           </motion.button>
         </motion.div>
 
-        {/* 🔹 Contact Form with Animation (no style change) */}
+        {/* 🔹 Contact Form with Animation */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
