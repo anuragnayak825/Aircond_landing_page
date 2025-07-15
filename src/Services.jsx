@@ -83,8 +83,8 @@ export default function Services() {
                     </p>
                     <hr className="border border-[#ffc513] w-10 mt-2 lg:mt-1" />
                 </div>
-                <p className='text-xl font-semibold tracking-wide text-center px-2'>
-                    We provide a variety of services
+                <p className='text-lg font-semibold tracking-wide text-center px-2'>
+                    We provide expert air conditioning maintenance to keep your system running smoothly, efficiently, and reliably all year round.
                 </p>
             </div>
 
@@ -98,7 +98,7 @@ export default function Services() {
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
                         variants={cardVariants}
-                        className='relative w-full max-w-xs h-[58vh] sm:h-[65vh] bg-gradient-to-b from-[#ccc8c8] to-[#f7f7f7] rounded-ee-[100px] px-5 shadow-md'
+                        className='relative w-full max-w-xs h-auto py-3.5 bg-gradient-to-b from-[#ccc8c8] to-[#f7f7f7] rounded-ee-[100px] px-5 shadow-md'
                     >
                         {/* Image */}
                         <motion.img
@@ -122,7 +122,7 @@ export default function Services() {
                         </div>
 
                         {/* Description */}
-                        <p className='text-sm text-gray-600 tracking-wide font-semibold mb-3'>
+                        <p className='text-[17px] text-gray-600 tracking-wide font-semibold mb-3'>
                             {ele.description}
                         </p>
 

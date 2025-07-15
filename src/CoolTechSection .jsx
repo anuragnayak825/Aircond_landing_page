@@ -1,25 +1,31 @@
 import React from 'react';
 import { FaSnowflake, FaWind } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const CoolTechSection = () => {
     return (
         <section className="py-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-32 bg-[url('https://cooltech-vite.vercel.app/assets/pattern-2-B9zh0663.png')] bg-no-repeat bg-top bg-cover">
             <div className="relative max-w-[1440px] mx-auto flex flex-col md:flex-row items-center lg:items-center justify-center gap-y-12 md:gap-x-16">
 
-                {/* Left Column */}
-                <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-[360px] flex justify-center lg:justify-end">
+                {/* Left Column with Image Animation */}
+                <motion.div
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="relative w-full max-w-xs sm:max-w-sm md:max-w-[360px] flex justify-center lg:justify-end"
+                >
                     {/* Main Image */}
                     <div className="relative z-10">
                         <img
                             src="https://cooltech-vite.vercel.app/assets/about2-1-BNuWFb_a.jpg"
                             alt="AC Installation"
-                            className="w-full "
+                            className="w-full"
                         />
-                        {/* Bottom Image */}
                         <img
                             src="https://cooltech-vite.vercel.app/assets/about2-2-CIil4rct.jpg"
                             alt="AC Maintenance"
-                            className="absolute bottom-0 right-0 w-full max-w-[50%] border-t-8 border-e-8 border-s-8 border-white "
+                            className="absolute bottom-0 right-0 w-full max-w-[50%] border-t-8 border-e-8 border-s-8 border-white"
                         />
                     </div>
 
@@ -39,10 +45,16 @@ const CoolTechSection = () => {
                         </div>
                         <div className="absolute -bottom-2 left-1 w-5 h-5 bg-white transform rotate-45 z-[-1]"></div>
                     </div>
-                </div>
+                </motion.div>
 
-                {/* Right Column */}
-                <div className="w-full max-w-xl text-center lg:text-left">
+                {/* Right Column with Content Animation */}
+                <motion.div
+                    initial={{ x: 100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="w-full max-w-xl text-center lg:text-left"
+                >
                     {/* Heading Label */}
                     <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-start space-x-0 lg:space-x-2 mb-2">
                         <p className="text-[#ffc513] font-semibold uppercase tracking-wider font-serif text-sm sm:text-base">About Aircond</p>
@@ -63,23 +75,40 @@ const CoolTechSection = () => {
 
                     {/* Features */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 justify-items-center lg:justify-items-start">
-                        <div className="flex items-start space-x-3">
-                            <div className="text-[#ffc513] text-3xl"><FaSnowflake /></div>
-                            <h4 className="text-blue-900 font-semibold text-base">Expert Team Members</h4>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                            <div className="text-[#ffc513] text-3xl"><FaWind /></div>
-                            <h4 className="text-blue-900 font-semibold text-base">Safe Solution For Home</h4>
-                        </div>
+                        {[{
+                            icon: <FaSnowflake />,
+                            text: "Expert Team Members"
+                        }, {
+                            icon: <FaWind />,
+                            text: "Safe Solution For Home"
+                        }].map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.3 * (index + 1), duration: 0.5 }}
+                                viewport={{ once: true }}
+                                className="flex items-start space-x-3"
+                            >
+                                <div className="text-[#ffc513] text-3xl">{item.icon}</div>
+                                <h4 className="text-blue-900 font-semibold text-base">{item.text}</h4>
+                            </motion.div>
+                        ))}
                     </div>
 
-                    {/* CTA Button */}
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-center lg:justify-start gap-5">
+                    {/* CTA Button Animation */}
+                    <motion.div
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.7 }}
+                        viewport={{ once: true }}
+                        className="flex flex-col sm:flex-row sm:items-center justify-center lg:justify-start gap-5"
+                    >
                         <button className="bg-[#ffc513] hover:bg-[#e6b300] text-white font-bold px-6 py-3 rounded-md shadow-md transition-all text-sm sm:text-base">
                             Contact Us
                         </button>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );
