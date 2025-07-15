@@ -19,7 +19,7 @@ const CoolTechSection = () => {
                         <img
                             src="https://cooltech-vite.vercel.app/assets/about2-2-CIil4rct.jpg"
                             alt="AC Maintenance"
-                            className="absolute bottom-0 right-0 w-full max-w-[50%] border-t-8 border-e-8 border-s-8 border-white"
+                            className="absolute bottom-0 right-0 w-full max-w-[50%] border-t-8 border-e-8 border-s-8 border-white rounded"
                         />
                     </div>
 
