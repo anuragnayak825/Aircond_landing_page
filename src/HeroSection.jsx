@@ -50,10 +50,10 @@ export default function HeroSection() {
       </div>
 
       {/* 🔷 Text + Form Content */}
-      <div className="relative w-full flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-8 lg:gap-10 xl:gap-10 2xl:gap-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28 py- z-10">
+      <div className="relative w-full flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-8 lg:gap-10 xl:gap-10 2xl:gap-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28 py-5 z-10">
         {/* Text Section */}
-        <div className="text-white max-w-lg space-y-1.5 sm:space-y-4 md:space-y-4 lg:space-y-4 xl:space-y-4 2xl:space-y-4 text-start lg:text-left">
-          <h1 className="text-xl sm:text-3xl md:text-4xl font-semibold leading-snug">
+        <div className="text-white max-w-lg space-y-2 sm:space-y-4 md:space-y-4 lg:space-y-4 xl:space-y-4 2xl:space-y-4 text-start lg:text-left">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-snug">
             Professional Aircon Services You Can Rely On –{" "}
             <span className="text-yellow-400">(KL)</span>
           </h1>
@@ -61,7 +61,7 @@ export default function HeroSection() {
             Aircon Not Cooling?{" "}
             <span className="text-red-400 font-semibold">We’ve Got You Covered</span>
           </p>
-          <p className="text-xs sm:text-base md:text-lg tracking-wide">
+          <p className="text-lg sm:text-base md:text-lg tracking-wide">
             Professional air conditioner servicing and repair in Kuala Lumpur.
             <br className="hidden sm:block" />
             Prompt, clean, and customer-friendly technicians.
