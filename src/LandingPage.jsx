@@ -7,6 +7,9 @@ export default function LandingPage() {
     <>
       <Header />
       <HeroSection />
+      <div className='w-full'>
+
+      </div>
     </>
   )
 }
