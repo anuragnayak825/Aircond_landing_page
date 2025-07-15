@@ -16,7 +16,7 @@ export default function ContactForm() {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="w-full max-w-lg backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl p-6 sm:p-8 space-y-6 text-white"
+      className="w-full max-w-md backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl p-6 sm:p-8 space-y-6 text-white"
     >
       <h2 className="text-2xl sm:text-3xl font-bold text-center">Get Help Instantly!</h2>
 
@@ -42,15 +42,13 @@ export default function ContactForm() {
         </div>
       ))}
 
-      <div className="flex justify-start">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95, rotateX: 10 }}
-          className="px-6 py-3 bg-blue-700 hover:bg-blue-800 text-white font-semibold rounded-md shadow-md transition"
-        >
-          Submit
-        </motion.button>
-      </div>
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95, rotateX: 10 }}
+        className="w-full px-6 py-3 bg-blue-700 hover:bg-blue-800 text-white font-semibold rounded-md shadow-md transition"
+      >
+        Submit
+      </motion.button>
     </motion.form>
   );
 }
