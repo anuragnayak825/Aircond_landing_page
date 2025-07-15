@@ -77,7 +77,7 @@ export default function Header() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://wa.me/60123456789"
+              href="https://wa.me/60163824522"
               target="_blank"
               rel="noopener noreferrer"
               className="group animate-zoom flex items-center justify-center text-white font-semibold rounded-full overflow-hidden transition-all shadow-md hover:shadow-lg bg-green-600 hover:bg-green-700"
