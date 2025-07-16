@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
       </div>
 
       {/* Responsive Card Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 gap-16 justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:gap-16 gap-16 justify-items-center">
         {services.map((service, index) => (
           <motion.div
             key={index}

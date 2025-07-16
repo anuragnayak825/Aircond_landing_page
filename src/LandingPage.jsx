@@ -7,6 +7,7 @@ import WhyChooseUs from './WhyChooseUs'
 import Steps from './Steps'
 import BlogSlider from './BlogSlider'
 import Footer from './Footer'
+import OpenIconSpeedDial from './OpenIconSpeedDial'
 
 export default function LandingPage() {
   return (
@@ -19,6 +20,7 @@ export default function LandingPage() {
       <Steps/>
       <BlogSlider/>
       <Footer/>
+      <OpenIconSpeedDial />
     </>
   )
 }

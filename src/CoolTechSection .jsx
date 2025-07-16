@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const CoolTechSection = () => {
     return (
-        <section className="py-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-32 bg-[url('https://cooltech-vite.vercel.app/assets/pattern-2-B9zh0663.png')] bg-no-repeat bg-top bg-cover">
+        <section className="overflow-x-hidden py-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-32 bg-[url('https://cooltech-vite.vercel.app/assets/pattern-2-B9zh0663.png')] bg-no-repeat bg-top bg-cover">
             <div className="relative max-w-[1440px] mx-auto flex flex-col md:flex-row items-center lg:items-center justify-center gap-y-12 md:gap-x-16">
 
                 {/* Left Column with Image Animation */}
@@ -104,7 +104,10 @@ const CoolTechSection = () => {
                         viewport={{ once: true }}
                         className="flex flex-col sm:flex-row sm:items-center justify-center lg:justify-start gap-5"
                     >
-                        <button onClick={()=>{window.location.href='tel:+60163824522'}} className="bg-[#ffc513] hover:bg-[#e6b300] text-white font-bold px-6 py-3 rounded-md shadow-md transition-all text-sm sm:text-base">
+                        <button
+                            onClick={() => { window.location.href = 'tel:+60163824522' }}
+                            className="bg-[#ffc513] hover:bg-[#e6b300] text-white font-bold px-6 py-3 rounded-md shadow-md transition-all text-sm sm:text-base"
+                        >
                             Contact Us
                         </button>
                     </motion.div>

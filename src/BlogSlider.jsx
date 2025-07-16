@@ -10,14 +10,14 @@ const blogs = [
         id: 1,
         title: "We very careful handling the valuable goods",
         date: "February 11, 2022",
-        img: "https://img.freepik.com/free-photo/medium-shot-smiley-people-wearing-helmets_23-2149366669.jpg?t=st=1752652296~exp=1752655896~hmac=fcba6ae31ff4554669c3204a9975766e53f25f45221ce87647ebffcfe5531c5d&w=740",
+        img: "https://img.freepik.com/free-photo/electrician-is-mounting-electric-sockets-white-wall-indoors_169016-17659.jpg?t=st=1752658346~exp=1752661946~hmac=5dfb9e465408dcc2aa0a5acf96783264f3a0c97597ca0f01b5eb61bb93692c17&w=740",
         desc: "It is a long established fact that a reader des will oi beik distracted by the readable",
     },
     {
         id: 2,
         title: "We very careful handling the valuable goods",
         date: "May 30, 2022",
-        img: "https://img.freepik.com/free-photo/serviceman-arriving-help-apprentice_482257-85127.jpg?t=st=1752652586~exp=1752656186~hmac=93d79e37d791e68c675f40450c6d35ca972f8c3110e186ca130527c3efc83aea&w=740",
+        img: "https://img.freepik.com/free-photo/medium-shot-people-wearing-helmets_23-2149366666.jpg",
         desc: "It is a long established fact that a reader des will oi beik distracted by the readable",
     },
     {
@@ -43,7 +43,7 @@ const BlogSlider = () => {
     return (
         <section className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 text-center">
-                <div className="flex lg:flex-row items-center lg:items-start justify-center lg:justify-start space-x-0 lg:space-x-2 mb-2">
+                <div className="flex lg:flex-row items-center lg:items-start justify-center  space-x-0 lg:space-x-2 mb-2">
                     <p className="text-[#ffc513] font-semibold uppercase tracking-wider font-serif text-lg sm:text-base">Our Blog</p>
                     <hr className="border border-[#ffc513] w-10 ml-2 lg:mt-1" />
                 </div>
@@ -69,6 +69,7 @@ const BlogSlider = () => {
                 <Swiper
                     modules={[Navigation]}
                     spaceBetween={20}
+                     loop={false}
                     navigation={{
                         prevEl: prevRef.current,
                         nextEl: nextRef.current,
@@ -79,11 +80,12 @@ const BlogSlider = () => {
                         swiper.navigation.init();
                         swiper.navigation.update();
                     }}
+                   
                     breakpoints={{
                         320: { slidesPerView: 1 },
                         640: { slidesPerView: 1 },
                         768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 },
                     }}
                 >
                     {blogs.map((blog) => (
