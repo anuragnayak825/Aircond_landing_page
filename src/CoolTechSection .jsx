@@ -41,7 +41,7 @@ const CoolTechSection = () => {
                         </div>
                         <div>
                             <p className="text-sm text-gray-500">Call Anytime</p>
-                            <p className="font-bold text-blue-900 text-lg">92 000 666 8888</p>
+                            <p className="font-bold text-blue-900 text-lg">+60 16-382 4522</p>
                         </div>
                         <div className="absolute -bottom-2 left-1 w-5 h-5 bg-white transform rotate-45 z-[-1]"></div>
                     </div>

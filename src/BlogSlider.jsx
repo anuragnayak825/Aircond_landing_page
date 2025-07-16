@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules"; // ✅ Import Autoplay
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaUser, FaCalendar, FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -34,6 +34,20 @@ const blogs = [
         img: "https://img.freepik.com/free-photo/worker-repairing-ac_23-2149393649.jpg?w=740&t=st=1752654700~exp=1752658300~hmac=f0aeaf476099c63b1dbf528dcdf1b1143b9c3b1e3b8ecbc17e2d90b19765073e",
         desc: "It is a long established fact that a reader des will oi beik distracted by the readable",
     },
+    {
+        id: 4,
+        title: "Safe and fast service guaranteed",
+        date: "July 4, 2022",
+        img: "https://img.freepik.com/free-photo/worker-repairing-ac_23-2149393649.jpg?w=740&t=st=1752654700~exp=1752658300~hmac=f0aeaf476099c63b1dbf528dcdf1b1143b9c3b1e3b8ecbc17e2d90b19765073e",
+        desc: "It is a long established fact that a reader des will oi beik distracted by the readable",
+    },
+    {
+        id: 4,
+        title: "Safe and fast service guaranteed",
+        date: "July 4, 2022",
+        img: "https://img.freepik.com/free-photo/worker-repairing-ac_23-2149393649.jpg?w=740&t=st=1752654700~exp=1752658300~hmac=f0aeaf476099c63b1dbf528dcdf1b1143b9c3b1e3b8ecbc17e2d90b19765073e",
+        desc: "It is a long established fact that a reader des will oi beik distracted by the readable",
+    },
 ];
 
 const BlogSlider = () => {
@@ -43,7 +57,7 @@ const BlogSlider = () => {
     return (
         <section className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 text-center">
-                <div className="flex lg:flex-row items-center lg:items-start justify-center  space-x-0 lg:space-x-2 mb-2">
+                <div className="flex lg:flex-row items-center lg:items-start justify-center space-x-0 lg:space-x-2 mb-2">
                     <p className="text-[#ffc513] font-semibold uppercase tracking-wider font-serif text-lg sm:text-base">Our Blog</p>
                     <hr className="border border-[#ffc513] w-10 ml-2 lg:mt-1" />
                 </div>
@@ -67,9 +81,14 @@ const BlogSlider = () => {
                 </div>
 
                 <Swiper
-                    modules={[Navigation]}
+                    modules={[Navigation, Autoplay]} // ✅ Autoplay module
                     spaceBetween={20}
-                     loop={false}
+                    loop={true} // ✅ Infinite loop
+                    autoplay={{
+                        delay: 2500, // milliseconds between slides
+                        disableOnInteraction: false, // ✅ keep autoplay after user interacts
+                        pauseOnMouseEnter: true, // ✅ (Optional) pause on hover
+                    }}
                     navigation={{
                         prevEl: prevRef.current,
                         nextEl: nextRef.current,
@@ -80,7 +99,6 @@ const BlogSlider = () => {
                         swiper.navigation.init();
                         swiper.navigation.update();
                     }}
-                   
                     breakpoints={{
                         320: { slidesPerView: 1 },
                         640: { slidesPerView: 1 },
@@ -90,7 +108,7 @@ const BlogSlider = () => {
                 >
                     {blogs.map((blog) => (
                         <SwiperSlide key={blog.id}>
-                            <div className="flex flex-col lg:flex-row items-center border border-gray-300 rounded bg-white overflow-hidden max-w-md mx-auto">
+                            <div className="flex flex-col shadow-md lg:flex-row items-center border border-gray-300 rounded bg-white overflow-hidden max-w-md mx-auto">
                                 <div className="w-full lg:w-[120px] h-auto flex-shrink-0">
                                     <img
                                         src={blog.img}
@@ -113,7 +131,7 @@ const BlogSlider = () => {
                                     <p className="text-sm font-medium text-gray-500 text-left">
                                         {blog.desc}
                                     </p>
-                                    <button className="py-2.5 px-4 rounded-md bg-blue-800 text-white font-semibold hover:bg-blue-900 transition">
+                                    <button onClick={() => { window.location.href = 'tel:+60163824522' }} className="py-2.5 px-4 rounded-md bg-blue-800 text-white font-semibold hover:bg-blue-900 transition">
                                         Call Now
                                     </button>
                                 </div>

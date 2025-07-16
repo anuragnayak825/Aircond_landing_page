@@ -11,13 +11,13 @@ const actions = [
   {
     icon: <WhatsAppIcon />,
     name: 'WhatsApp',
-    onClick: () => window.open('https://wa.me/your_number_here', '_blank'),
+    onClick: () => window.open('https://wa.me/+60163824522', '_blank'),
     bgColor: '#25D366', // WhatsApp green
   },
   {
     icon: <CallIcon />,
     name: 'Call',
-    onClick: () => (window.location.href = 'tel:+91XXXXXXXXXX'),
+    onClick: () => (window.location.href = 'tel:+60163824522'),
     bgColor: '#007bff', // Blue
   },
   {
