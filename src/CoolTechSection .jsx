@@ -104,7 +104,7 @@ const CoolTechSection = () => {
                         viewport={{ once: true }}
                         className="flex flex-col sm:flex-row sm:items-center justify-center lg:justify-start gap-5"
                     >
-                        <button className="bg-[#ffc513] hover:bg-[#e6b300] text-white font-bold px-6 py-3 rounded-md shadow-md transition-all text-sm sm:text-base">
+                        <button onClick={()=>{window.location.href='tel:+60163824522'}} className="bg-[#ffc513] hover:bg-[#e6b300] text-white font-bold px-6 py-3 rounded-md shadow-md transition-all text-sm sm:text-base">
                             Contact Us
                         </button>
                     </motion.div>

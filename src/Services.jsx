@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaTools, FaSnowflake, FaThermometerHalf, FaWater, FaBolt, FaWind } from 'react-icons/fa'
+import { FaTools, FaSnowflake, FaThermometerHalf, FaWater, FaBolt, FaWind, FaPhone } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
 const services = [
@@ -127,8 +127,8 @@ export default function Services() {
                         </p>
 
                         {/* Button */}
-                        <button className='px-3.5 py-2.5 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition'>
-                            Connect Us
+                        <button onClick={()=>{window.location.href='tel:+60163824522'}} className='px-3.5 py-2.5 tracking-wide bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition'>
+                           Book Now
                         </button>
                     </motion.div>
                 ))}
