@@ -5,6 +5,8 @@ import CoolTechSection from './CoolTechSection '
 import Services from './Services'
 import WhyChooseUs from './WhyChooseUs'
 import Steps from './Steps'
+import BlogSlider from './BlogSlider'
+import Footer from './Footer'
 
 export default function LandingPage() {
   return (
@@ -15,6 +17,8 @@ export default function LandingPage() {
       <Services/>
       <WhyChooseUs/>
       <Steps/>
+      <BlogSlider/>
+      <Footer/>
     </>
   )
 }

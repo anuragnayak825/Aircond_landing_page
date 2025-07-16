@@ -65,7 +65,7 @@ const Steps = () => {
                   absolute bottom-5 left-6 bg-blue-900 text-white text-xs sm:text-sm font-bold w-7 h-7 sm:w-8 sm:h-8 
                   rounded-full flex items-center justify-center z-20 shadow-md
                   transition-all duration-700 ease-in-out 
-                  group-hover:top-[24px] group-hover:left-[90px] group-hover:bottom-auto
+                  group-hover:top-[24px] group-hover:left-[110px] group-hover:bottom-auto
                 "
               >
                 {step.id.toString().padStart(2, '0')}
@@ -73,7 +73,7 @@ const Steps = () => {
             </div>
 
             {/* Title */}
-            <p className="mt-5 text-sm sm:text-base font-semibold text-[#003333] leading-snug">
+            <p className="mt-5 text-[16px] sm:text-base font-semibold text-[#003333] leading-snug">
               {step.title.split(' ').slice(0, 2).join(' ')} <br />
               {step.title.split(' ').slice(2).join(' ')}
             </p>
