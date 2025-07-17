@@ -31,12 +31,12 @@ const Footer = () => {
                     <p className="text-sm text-gray-300 leading-relaxed">
                         Desires to obtain pain of itself, because it is pain, but occasionally circumstances.
                     </p>
-                    <div className="flex items-center gap-4 text-white text-sm">
+                    {/* <div className="flex items-center gap-4 text-white text-sm">
                         <FaTwitter className="hover:text-orange-500 transition" />
                         <FaFacebookF className="hover:text-orange-500 transition" />
                         <FaPinterestP className="hover:text-orange-500 transition" />
                         <FaInstagram className="hover:text-orange-500 transition" />
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Service */}

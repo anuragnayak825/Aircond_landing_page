@@ -10,7 +10,7 @@ import Footer from './Footer'
 import OpenIconSpeedDial from './OpenIconSpeedDial'
 import AchievementsSection from './AchievementsSection'
 import ServicesSection from './ServicesSection'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaBolt, FaCheckCircle, FaWhatsapp } from 'react-icons/fa'
 import OfferSection from './OfferSection'
 export default function LandingPage() {
   return (
@@ -60,6 +60,8 @@ export default function LandingPage() {
       <Steps />
       <AchievementsSection />
       <BlogSlider />
+     
+     
       <Footer />
       <OpenIconSpeedDial />
     </>
