@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import emailjs from "emailjs-com";
 
 export default function ContactForm() {
   const [focusedField, setFocusedField] = useState("");
+  const [formData, setFormData] = useState({
+    Name: "",
+    "Phone no": "",
+    Address: "",
+    Message: "",
+  });
+  const [loading, setLoading] = useState(false);
   const nav = useNavigate();
 
   const fields = [
@@ -13,14 +21,64 @@ export default function ContactForm() {
     { name: "Message", type: "text" },
   ];
 
+  // Format phone number to 16-382 4522
+  const formatPhone = (value) => {
+    const numbers = value.replace(/\D/g, "").slice(0, 9);
+    const match = numbers.match(/^(\d{2})(\d{3})(\d{4})$/);
+    return match ? `${match[1]}-${match[2]} ${match[3]}` : numbers;
+  };
+
+  // Handle input change
+  const handleChange = (name, value) => {
+    if (name === "Phone no") {
+      value = formatPhone(value);
+    }
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Validate phone format
+  const validatePhone = (phone) => {
+    const regex = /^\d{2}-\d{3} \d{4}$/;
+    return regex.test(phone);
+  };
+
+  // Floating label logic
+  const shouldLabelFloat = (name) => {
+    return focusedField === name || formData[name].trim() !== "";
+  };
+
+  // Handle submit
   const onSubmit = (e) => {
-    e.preventDefault(); // 💥 Prevent default form submission
-    nav("/thank-you"); // ✅ Navigate to Thank You page
+    e.preventDefault();
+
+    if (!validatePhone(formData["Phone no"])) {
+      alert("Phone number must be in the format 16-382 4522");
+      return;
+    }
+
+    setLoading(true);
+
+    emailjs
+      .send(
+        "your_service_id",     // 🔁 Replace with your EmailJS service ID
+        "your_template_id",    // 🔁 Replace with your EmailJS template ID
+        formData,
+        "your_user_id"         // 🔁 Replace with your EmailJS public key
+      )
+      .then(() => {
+        setLoading(false);
+        nav("/thank-you");
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("There was an error sending your message. Please try again.");
+        setLoading(false);
+      });
   };
 
   return (
     <motion.form
-      onSubmit={onSubmit} // 🛠️ Correct place to handle form submission
+      onSubmit={onSubmit}
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -33,15 +91,16 @@ export default function ContactForm() {
           <input
             type={type}
             placeholder=" "
+            value={formData[name]}
             onFocus={() => setFocusedField(name)}
             onBlur={() => setFocusedField("")}
+            onChange={(e) => handleChange(name, e.target.value)}
             className="peer w-full bg-white text-black placeholder-transparent border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-blue-700 transition duration-300"
           />
           <label
-            className={`absolute left-4 top-3 text-gray-600 font-medium transition-all duration-300
-              peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500
+            className={`absolute left-4 text-gray-600 font-medium transition-all duration-300
+              ${shouldLabelFloat(name) ? "top-0 text-sm text-blue-700" : "top-3.5 text-base text-gray-500"}
               peer-focus:top-0 peer-focus:text-sm peer-focus:text-blue-700
-              ${focusedField === name ? "text-blue-700" : ""}
             `}
           >
             {name}
@@ -50,12 +109,15 @@ export default function ContactForm() {
       ))}
 
       <motion.button
-        type="submit" // ✅ Make this a submit button
+        type="submit"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95, rotateX: 10 }}
-        className="w-full px-6 py-3 bg-blue-700 hover:bg-blue-800 text-white font-semibold rounded-md shadow-md transition"
+        className={`w-full px-6 py-3 ${
+          loading ? "bg-gray-500 cursor-not-allowed" : "bg-blue-700 hover:bg-blue-800"
+        } text-white font-semibold rounded-md shadow-md transition`}
+        disabled={loading}
       >
-        Submit
+        {loading ? "Sending..." : "Submit"}
       </motion.button>
     </motion.form>
   );

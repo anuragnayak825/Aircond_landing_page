@@ -15,3 +15,6 @@ body {
 button {
   cursor: pointer;
 }
+*{
+  scroll-behavior: smooth;
+}
