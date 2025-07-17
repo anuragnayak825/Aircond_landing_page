@@ -68,9 +68,9 @@ export default function HeroSection() {
               <span className="text-yellow-400">(KL)</span>
             </h1>
 
-            <p className="text-base sm:text-xl md:text-2xl hidden sm:block">
+            <p className="text-base text-red-400 sm:text-xl md:text-2xl hidden sm:block">
               Aircon Not Cooling?{" "}
-              <span className="text-red-400 font-semibold">We’ve Got You Covered</span>
+              <span className=" text-white font-semibold">We’ve Got You Covered</span>
             </p>
 
             <p className="text-sm sm:text-base md:text-lg tracking-wide">

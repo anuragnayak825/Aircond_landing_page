@@ -20,10 +20,8 @@ const ThankYou = () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    // Agar tum react-router use kar rahe ho toh history ya navigate use kar sakte ho
     const handleGoBack = () => {
-        window.history.back(); // ya koi custom route redirect karna ho toh use karo
-        // example: navigate('/') if using react-router-dom v6
+        window.history.back();
     };
 
     return (
@@ -37,37 +35,37 @@ const ThankYou = () => {
                     recycle={false}
                 />
 
-                {/* Animated Checkmark */}
-                <svg
-                    className="w-24 h-24 mb-6 stroke-purple-700"
-                    viewBox="0 0 52 52"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <circle
-                        className="stroke-current"
-                        cx="26"
-                        cy="26"
-                        r="25"
-                        strokeWidth="2"
-                        stroke="#8b5cf6"
+                {/* Checkmark with white background and thick stroke */}
+                <div className="w-32 h-32 mb-6 rounded-full bg-green-600 flex items-center justify-center shadow-xl">
+                    <svg
+                        className="w-20 h-20"
+                        viewBox="0 0 52 52"
                         fill="none"
-                    />
-                    <path
-                        className="checkmark"
-                        fill="none"
-                        stroke="#8b5cf6"
-                        strokeWidth="4"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M14 27l7 7 16-16"
-                        style={{
-                            strokeDasharray: 48,
-                            strokeDashoffset: 48,
-                            animation: "drawCheck 0.5s forwards 0.5s",
-                        }}
-                    />
-                </svg>
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <circle
+                            cx="26"
+                            cy="26"
+                            r="25"
+                            stroke="white"
+                            strokeWidth="2"
+                            fill="none"
+                        />
+                        <path
+                            d="M14 27l7 7 16-16"
+                            fill="none"
+                            stroke="white"
+                            strokeWidth="5" // thicker
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            style={{
+                                strokeDasharray: 48,
+                                strokeDashoffset: 48,
+                                animation: "drawCheck 0.5s forwards 0.5s",
+                            }}
+                        />
+                    </svg>
+                </div>
 
                 <h1 className="text-6xl font-bold text-purple-700 animate-bounce mb-2">
                     Thank You!
@@ -87,14 +85,13 @@ const ThankYou = () => {
                     © 2025 | Made with ❤️
                 </div>
 
-                {/* Inline CSS animation for checkmark */}
                 <style>{`
-        @keyframes drawCheck {
-          to {
-            stroke-dashoffset: 0;
-          }
-        }
-      `}</style>
+                    @keyframes drawCheck {
+                        to {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                `}</style>
             </div>
             <Footer />
         </>

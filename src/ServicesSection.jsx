@@ -1,103 +1,67 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 export default function ServicesSection() {
-    return (
-        <section
-            className="relative py-20 px-6 md:px-12 bg-fixed bg-center bg-cover bg-no-repeat"
-            style={{
-                backgroundImage: "url('https://img.freepik.com/free-photo/worker-refilling-hvac-system-refrigerant_482257-90516.jpg?ga=GA1.1.2112137625.1747906340&semt=ais_hybrid&w=740')",
-            }}
-        >
-            {/* Overlay for visibility */}
-            <div className="absolute inset-0 bg-black/60 backdrop-blur-"></div>
+  const plans = [
+    {
+      name: "Basic Service – Wall Mounted",
+      features: [
+        { name: "1 Unit – RM 80", included: true },
+        { name: "2 Units – RM 70 each", included: false },
+        { name: "3 Units & above – RM 60 each", included: false },
+      ],
+    },
+    {
+      name: "Basic Cleaning – Ceiling Cassette",
+  
+      recommended: true,
+      features: [
+        { name: "1 Unit - RM 100/unit", included: true },
+        { name: "2 Units - RM 90/unit", included: true },
+        { name: "3 Units & above - RM 80/unit", included: true },
+      ],
+    },
+  ];
 
-            {/* Content Wrapper */}
-            <div className="relative z-10 text-center max-w-6xl mx-auto">
-                {/* Heading */}
-                <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="flex justify-center items-center space-x-2 mb-12"
-                >
-                    <p className="text-[#ffc513] font-semibold uppercase tracking-wider font-serif text-lg sm:text-2xl lg:text-3xl">Our Services & Pricing</p>
-                    <hr className="border border-[#ffc513] w-10 mt-2 lg:mt-1" />
-                </motion.div>
+  return (
+    <section className="bg-[#f8f9fb] py-16 px-4 md:px-10">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 items-start">
+        {/* Left section */}
+        <div>
+          <h4 className="text-sm font-semibold text-blue-700 mb-1">Our Plans</h4>
+          <h2 className="text-3xl font-bold leading-snug text-gray-800 mb-4">
+            Find The Plan That's Right For You
+          </h2>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            Mollit voluptate fugiat occaecat excepteur magna sunt commodo anim
+            incididunt consequat consequat commodo.
+          </p>
+        </div>
 
-                {/* Pricing Cards */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12"
+        {/* Pricing Cards */}
+        {plans.map((plan, idx) => (
+          <div
+            key={idx}
+            className={`bg-white w-full max-w- p-6 rounded-lg shadow-sm border border-gray-200 relative space-y-4`}
+          >
+            <h3 className="text-lg font-semibold text-gray-800 mt-4">
+              {plan.name}
+            </h3>
+            <ul className="space-y-2 text-sm mt-2">
+              {plan.features.map((feature, i) => (
+                <li
+                  key={i}
+                  className={`flex items-center text-blue-600`}
                 >
-                    {pricingData.map((item, index) => (
-                        <div
-                            key={index}
-                            className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center text-center"
-                        >
-                            <h3 className="text-2xl font-semibold text-[#0077b6] mb-4">{item.title}</h3>
-                            <ul className="text-sm text-gray-700 mb-6">
-                                {item.services.map((service, idx) => (
-                                    <li key={idx} className="mb-3">
-                                        <span className="font-semibold">{service.name}:</span> {service.price}
-                                    </li>
-                                ))}
-                            </ul>
-                            <p className="text-xs text-gray-500">{item.note}</p>
-                        </div>
-                    ))}
-                </motion.div>
-            </div>
-        </section>
-    );
+                  &nbsp;{feature.name}
+                </li>
+              ))}
+            </ul>
+            <button className="w-full bg-gray-800 text-white py-2 rounded font-semibold text-sm hover:bg-black transition">
+              💳 Pay With Stripe
+            </button>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
-
-// Pricing Data
-const pricingData = [
-    {
-        title: "Wall Mounted",
-        services: [
-            { name: "Troubleshooting", price: "RM 75/unit" },
-            { name: "Water Leaking", price: "RM 100/unit" },
-            { name: "Gas Refill (R22)", price: "RM 120" },
-            { name: "Gas Refill (R410)", price: "RM 150" },
-            { name: "Gas Refill (R32)", price: "RM 150" },
-            { name: "General Cleaning (1 Unit)", price: "RM 80/unit" },
-            { name: "General Cleaning (2 Units)", price: "RM 70/unit" },
-            { name: "General Cleaning (3+ Units)", price: "RM 60/unit" },
-            { name: "Chemical Service (1 Unit)", price: "RM 150/unit" },
-        ],
-        note: "Note: Troubleshoot RM 75 and repair charges apply to any unit diagnosed required repair/parts replacements.",
-    },
-    {
-        title: "Ceiling Cassette",
-        services: [
-            { name: "Troubleshooting", price: "RM 100/unit" },
-            { name: "Water Leaking", price: "RM 150/unit" },
-            { name: "Gas Refill (R22)", price: "RM 120" },
-            { name: "Gas Refill (R410)", price: "RM 150" },
-            { name: "Gas Refill (R32)", price: "RM 150" },
-            { name: "General Cleaning (1 Unit)", price: "RM 100/unit" },
-            { name: "General Cleaning (2 Units)", price: "RM 90/unit" },
-            { name: "General Cleaning (3+ Units)", price: "RM 80/unit" },
-            { name: "Chemical Service (1 Unit)", price: "RM 300/unit" },
-        ],
-        note: "Note: Gas more than 20psi is chargeable.",
-    },
-    {
-        title: "Chemical Service Wall Mounted",
-        services: [
-            { name: "Residential (1 Unit)", price: "RM 150/unit" },
-            { name: "Residential (2 Units)", price: "RM 130/unit" },
-            { name: "Residential (3 Units)", price: "RM 120/unit" },
-            { name: "Residential (5+ Units)", price: "RM 100/unit" },
-            { name: "Commercial", price: "RM 150/unit" },
-        ],
-        note: "Note: 45 Days warranty on water Leaking.",
-    },
-];
-

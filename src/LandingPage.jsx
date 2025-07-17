@@ -10,12 +10,14 @@ import Footer from './Footer'
 import OpenIconSpeedDial from './OpenIconSpeedDial'
 import AchievementsSection from './AchievementsSection'
 import ServicesSection from './ServicesSection'
-
+import { FaWhatsapp } from 'react-icons/fa'
+import OfferSection from './OfferSection'
 export default function LandingPage() {
   return (
     <>
       <Header />
       <HeroSection />
+      <CoolTechSection />
       <div className="w-full h-auto px-4 py-5">
         <div className="w-full max-w-6xl mx-auto bg-gradient-to-r from-[#1f295e] via-[#3c5a9a] to-[#2aa8d8] text-white p-6 md:p-8 rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
 
@@ -26,30 +28,34 @@ export default function LandingPage() {
             </div>
             <div className="flex-1">
               <h2 className="text-xl md:text-2xl font-bold leading-snug">
-                Special Promo – Limited Time Only!
+                Limited Time Offer!
               </h2>
               <p className="text-sm md:text-base font-medium mt-1">
-                Get a <span className="underline font-bold">20% discount</span> on your chemical clean + a no-obligation FREE quote when you fill our form.
+                Don’t miss your chance! WhatsApp us now and grab this special offer while it lasts.
               </p>
             </div>
           </div>
 
-          {/* 🎯 Call to Action Button */}
+          {/* ✅ WhatsApp CTA Button */}
           <div className="w-full md:w-auto">
             <a
-              href="tel:+60123456789"
-              className="block text-center bg-white text-[#1f295e] font-bold px-6 py-3 rounded-lg hover:bg-gray-200 transition-all duration-200 shadow-md w-full md:w-auto"
+              href="https://wa.me/60163824522"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-center bg-white text-[#25D366] font-bold px-6 py-3 rounded-lg hover:bg-gray-200 transition-all duration-200 shadow-md w-full md:w-auto flex items-center justify-center gap-2"
             >
-              📞 Call Now
+              <FaWhatsapp className="text-xl" />
+              Chat on WhatsApp
             </a>
           </div>
 
         </div>
       </div>
 
-      <CoolTechSection />
+
+      <OfferSection />
       <Services />
-      <ServicesSection/>
+      {/* <ServicesSection /> */}
       <WhyChooseUs />
       <Steps />
       <AchievementsSection />

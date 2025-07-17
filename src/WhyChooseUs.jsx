@@ -39,14 +39,13 @@ export default function WhyChooseUs() {
       viewport={{ once: true }}
     >
       <div className="max-w-4xl mx-auto text-center mb-16">
-        <div className="flex justify-center items-center">
-          <p className="text-[#ffc513] font-semibold uppercase tracking-wider font-serif text-lg mb-1">
-            Why Choose Us
-          </p>
-          <hr className="border border-[#ffc513] w-12 ml-2.5" />
-        </div>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#0c2340] mt-2">
-          Why you Should Choose our Services
+
+        <p className=" font-bold text-2xl sm:text-4xl mb-1">
+          The Advantage of Working With Us
+        </p>
+
+        <h2 className="text-sm  font-medium text-gray-500 mt-4">
+          From residential spaces to commercial environments, we understand the demands of Malaysia’s climate. Our AC services combine speed, reliability, and expertise — giving you cooling that fits your lifestyle.
         </h2>
       </div>
 

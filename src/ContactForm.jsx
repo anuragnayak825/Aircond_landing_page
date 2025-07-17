@@ -67,7 +67,7 @@ export default function ContactForm() {
       )
       .then(() => {
         setLoading(false);
-        nav("/thank-you");
+        nav("/landing-page/thank-you");
       })
       .catch((error) => {
         console.error("EmailJS Error:", error);

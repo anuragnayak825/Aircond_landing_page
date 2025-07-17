@@ -4,17 +4,17 @@ import { FaClipboardList, FaRobot, FaMoneyBillWave } from 'react-icons/fa';
 const steps = [
   {
     id: 1,
-    title: 'Choose Your Service',
+    title: 'Select a Service',
     icon: <FaClipboardList className="text-4xl sm:text-5xl" />,
   },
   {
     id: 2,
-    title: 'Get Satisfied Services',
+    title: 'Enjoy Reliable Service Delivery',
     icon: <FaRobot className="text-4xl sm:text-5xl" />,
   },
   {
     id: 3,
-    title: 'Make Instant Payment',
+    title: 'Pay Seamlessly & Instantly',
     icon: <FaMoneyBillWave className="text-4xl sm:text-5xl" />,
   },
 ];
@@ -34,15 +34,8 @@ const Steps = () => {
       {/* Content */}
       <div className="relative z-10">
         {/* Section Title */}
-        <div className="flex justify-center items-center mb-3">
-          <p className="text-[#ffc513] font-semibold uppercase tracking-wider font-serif text-base sm:text-lg">
-            How it work
-          </p>
-          <hr className="border border-[#ffc513] w-10 sm:w-12 ml-2.5" />
-        </div>
-
         <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-10 sm:mb-12">
-          3 easy step to task
+          How We Operate
         </h2>
 
         {/* Step Cards */}

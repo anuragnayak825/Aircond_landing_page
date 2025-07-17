@@ -50,19 +50,36 @@ const BlogSlider = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="http://img.freepik.com/free-photo/young-man-laid-couch-with-laptop_23-2148560426.jpg" // 🔁 Replace with your actual image path
+          src="http://img.freepik.com/free-photo/young-man-laid-couch-with-laptop_23-2148560426.jpg"
           alt="Background"
           className="w-full h-full object-cover"
         />
-        {/* Blur Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f1c47c5] via-[#0f1c47c5] to-transparent backdrop-blur-xs"></div>
       </div>
 
       {/* Foreground Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">Google Reviews</h2>
-        <p className="text-2xl text-yellow-400 font-semibold mb-2">⭐ 4.7 Rating</p>
-        <p className="mb-12 text-sm text-gray-300">2,180+ verified reviews</p>
+
+        {/* ⭐ Star Rating */}
+        <div className="flex items-center justify-center gap-2 mb-2">
+          <div className="flex">
+            {[...Array(4)].map((_, i) => (
+              <FaStar key={i} className="text-yellow-400 text-xl" />
+            ))}
+            {/* Half Star (70%) */}
+            <div className="relative w-5 h-5">
+              <FaStar className="text-gray-300 absolute top-0 left-0 w-full h-full" />
+              <FaStar
+                className="text-yellow-400 absolute top-0 left-0 w-full h-full"
+                style={{ clipPath: "inset(0 30% 0 0)" }}
+              />
+            </div>
+          </div>
+          <p className="text-yellow-400 text-xl font-semibold">4.7</p>
+        </div>
+
+        <p className="mb-12 text-sm text-gray-300">verified reviews</p>
 
         {/* Navigation Arrows */}
         <div className="flex justify-center mb-10 gap-5">

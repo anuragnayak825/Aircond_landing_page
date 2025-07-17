@@ -4,17 +4,82 @@
     align-items: flex-start;
   }
 
-  .hero-row-layout > div {
+  .hero-row-layout>div {
     flex: 1 1 50%;
     max-width: 50%;
   }
 }
+
 body {
   overflow-x: hidden;
 }
+
 button {
   cursor: pointer;
 }
-*{
+
+* {
   scroll-behavior: smooth;
+}
+
+/* App.css */
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-2px);
+  }
+
+  40% {
+    transform: translateX(2px);
+  }
+
+  60% {
+    transform: translateX(-2px);
+  }
+
+  80% {
+    transform: translateX(2px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-vibrate {
+  animation: vibrate 0.5s linear infinite;
+}
+
+.zoomin-out {
+  animation: bounceExpand 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes bounceExpand{
+
+  0%,
+  100% {
+    transform: scale(1) translateY(0);
+  }
+
+  50% {
+    transform: scale(1.050) translateY(-5px);
+  }
+}
+
+
+@layer utilities {
+  .animate-vibrate {
+    animation: vibrate 0.4s infinite;
+  }
+
+  @keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+  }
 }
