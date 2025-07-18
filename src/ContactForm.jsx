@@ -48,7 +48,7 @@ export default function ContactForm() {
   };
 
   // Handle submit
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
     if (!validatePhone(formData["Phone no"])) {
@@ -56,26 +56,43 @@ export default function ContactForm() {
       return;
     }
 
-    setLoading(true);
+    setLoading(true)
+    const queryString = new URLSearchParams(formData).toString();
 
-    emailjs
-      .send(
-        "your_service_id",     // 🔁 Replace with your EmailJS service ID
-        "your_template_id",    // 🔁 Replace with your EmailJS template ID
-        formData,
-        "your_user_id"         // 🔁 Replace with your EmailJS public key
-      )
-      .then(() => {
-        setLoading(false);
-        nav("/thank-you");
-      })
-      .catch((error) => {
-        console.error("EmailJS Error:", error);
-        alert("There was an error sending your message. Please try again.");
-        setLoading(false);
-        nav("/thank-you");
-      });
+    try {
+      await fetch(
+        `https://script.google.com/macros/s/AKfycbzH8HDYbGUf5VHw09Sd9d084--ZbmGPNl-oFvDW41TZ2oNCp6asxBn1FCoLAXBuD2vuyg/exec?${queryString}`,
+        {
+          method: "GET",
+          mode: "no-cors",
+        }
+      );
+      setLoading(false);
+      nav("/thank-you");
+    } catch (error) {
+      alert("There was an error sending your message. Please try again.");
+      setLoading(false);
+    }
+
+
   };
+
+  // emailjs
+  //   .send(
+  //     "your_service_id",     // 🔁 Replace with your EmailJS service ID
+  //     "your_template_id",    // 🔁 Replace with your EmailJS template ID
+  //     formData,
+  //     "your_user_id"         // 🔁 Replace with your EmailJS public key
+  //   )
+  //   .then(() => {
+
+  //   })
+  //   .catch((error) => {
+  //     console.error("EmailJS Error:", error);
+  //     alert("There was an error sending your message. Please try again.");
+  //     setLoading(false);
+  //     nav("/thank-you");
+  //   });
 
   return (
     <motion.form
@@ -113,9 +130,8 @@ export default function ContactForm() {
         type="submit"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95, rotateX: 10 }}
-        className={`w-full px-6 py-3 ${
-          loading ? "bg-gray-500 cursor-not-allowed" : "bg-blue-700 hover:bg-blue-800"
-        } text-white font-semibold rounded-md shadow-md transition`}
+        className={`w-full px-6 py-3 ${loading ? "bg-gray-500 cursor-not-allowed" : "bg-blue-700 hover:bg-blue-800"
+          } text-white font-semibold rounded-md shadow-md transition`}
         disabled={loading}
       >
         {loading ? "Sending..." : "Submit"}
