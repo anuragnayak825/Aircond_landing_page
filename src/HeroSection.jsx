@@ -28,7 +28,7 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="relative w-full h-fit lg:min-h-screen overflow-hidden">
+    <div id="Hero" className="relative w-full h-fit lg:min-h-screen overflow-hidden">
       {/* 🔷 Background Swiper */}
       <div className="absolute top-0 left-0 w-full h-full -z-10">
         <Swiper

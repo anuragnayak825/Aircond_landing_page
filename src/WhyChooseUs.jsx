@@ -90,11 +90,11 @@ export default function WhyChooseUs() {
                   <span className="absolute inset-0 bg-[#ffc513] -translate-x-full group-hover/card:translate-x-0 transition-transform duration-500 ease-in-out z-0"></span>
                   <span className="absolute inset-0 bg-[#0c2340] z-[-1]"></span>
                 </span>
-                <span className="relative w-32 px-4 py-2 text-center text-white overflow-hidden z-10">
+                <a href='#' className="relative w-32 px-4 py-2 text-center text-white overflow-hidden z-10">
                   <span className="relative z-10">More Details</span>
                   <span className="absolute inset-0 bg-[#0c2340] -translate-x-full group-hover/card:translate-x-0 transition-transform duration-500 ease-in-out z-0"></span>
                   <span className="absolute inset-0 bg-[#ffc513] z-[-1]"></span>
-                </span>
+                </a>
               </div>
             </div>
           </motion.div>

@@ -31,14 +31,14 @@ const ThankYou = () => {
                 <Confetti
                     width={windowDimensions.width}
                     height={windowDimensions.height}
-                    numberOfPieces={400}
+                    numberOfPieces={1000}
                     recycle={false}
                 />
 
                 {/* Checkmark with white background and thick stroke */}
-                <div className="w-32 h-32 mb-6 rounded-full bg-green-600 flex items-center justify-center shadow-xl">
+                <div className="w-32 h-32 mb-6 rounded-full bg-green-600 flex items-center justify-center shadow-xl zoomin-out">
                     <svg
-                        className="w-20 h-20"
+                        className="w-20 h-20 "
                         viewBox="0 0 52 52"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -67,11 +67,11 @@ const ThankYou = () => {
                     </svg>
                 </div>
 
-                <h1 className="text-6xl font-bold text-purple-700 animate-bounce mb-2">
+                <h1 className="text-6xl font-bold text-purple-700  mb-2">
                     Thank You!
                 </h1>
                 <p className="mt-2 text-xl text-gray-700 mb-6">
-                    Your submission has been received 🎉
+                   Thank you for reaching out! Our team will get back to you as soon as possible.
                 </p>
 
                 <button

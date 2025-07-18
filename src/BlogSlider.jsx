@@ -54,7 +54,7 @@ const BlogSlider = () => {
           alt="Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0f1c47c5] via-[#0f1c47c5] to-transparent backdrop-blur-xs"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040713c5] via-[#040f31c5] to-transparent backdrop-blur-sm"></div>
       </div>
 
       {/* Foreground Content */}
