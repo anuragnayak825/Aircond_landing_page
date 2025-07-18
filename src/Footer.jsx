@@ -15,6 +15,7 @@ const services = [
     'Aircon installation',
     'Aircon Maintenance',
     'Residential Aircon Services',
+    'Commercial Aircon Services'
 ];
 
 const Footer = () => {
@@ -69,7 +70,7 @@ const Footer = () => {
                 </div>
 
                 {/* Gallery */}
-               
+
             </div>
         </footer>
     );

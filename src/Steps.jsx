@@ -7,21 +7,21 @@ const steps = [
     title: 'Select a Service',
     icon: <FaClipboardList className="text-4xl sm:text-5xl" />,
     description:
-      'Browse our range of AC Cool N Cool Engineering solutions to find the right service for your needs.',
+      'Browse our wide range of AC Cool N Cool Engineering solutions to find the perfect service tailored to your needs.',
   },
   {
     id: 2,
     title: 'Enjoy Reliable Service Delivery',
     icon: <FaRobot className="text-4xl sm:text-5xl" />,
     description:
-      'Our trained technicians will arrive on time and complete the job with precision and care.',
+      'Our certified technicians arrive on time and complete every job with precision, professionalism, and care.',
   },
   {
     id: 3,
     title: 'Pay Seamlessly & Instantly',
     icon: <FaMoneyBillWave className="text-4xl sm:text-5xl" />,
     description:
-      'Make payments instantly through safe and convenient options.',
+      'Make fast, secure payments through our trusted and convenient payment options — no delays, no hassle.',
   },
 ];
 

@@ -27,7 +27,7 @@ const ThankYou = () => {
     return (
         <>
             <Header />
-            <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-pink-100 via-yellow-100 to-purple-200 overflow-hidden relative px-4">
+            <div className="flex flex-col items-center justify-center h-[80vh] bg-gradient-to-br from-pink-100 via-yellow-100 to-purple-200 overflow-hidden relative px-4">
                 <Confetti
                     width={windowDimensions.width}
                     height={windowDimensions.height}
