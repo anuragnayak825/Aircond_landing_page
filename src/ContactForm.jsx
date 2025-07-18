@@ -73,6 +73,7 @@ export default function ContactForm() {
         console.error("EmailJS Error:", error);
         alert("There was an error sending your message. Please try again.");
         setLoading(false);
+        nav("/thank-you");
       });
   };
 
