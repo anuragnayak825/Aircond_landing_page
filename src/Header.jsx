@@ -46,14 +46,7 @@ export default function Header() {
               className="w-[90px] h-[90px] object-contain drop-shadow-md cursor-pointer"
               onClick={() => { location.pathname.startsWith('/privacy-policy')&& window.history.back() }}
             />
-            <div className="sm:block">
-              <h1 className="text-xs sm:text-xl md:text-xl font-bold leading-tight">
-                <span className="text-[#F9B233]">A</span>
-                <span className="text-[#F9B233]">C</span>{' '}
-                <span className="text-white">COOL N COOL</span>
-              </h1>
-              <p className="text-xs sm:text-sm text-yellow-100">Engineering Services</p>
-            </div>
+           
           </div>
 
 
