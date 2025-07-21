@@ -63,22 +63,20 @@ export default function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-white w-full space-y-4 md:space-y-6 sm:text-left"
           >
-            <div>
-              <h1 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-white ">
+            <div className="space-y-4">
+              <h1 className="text-2xl sm:text-3xl md:text-[45px] font-semibold text-white ">
                 Fast & Reliable Aircon Repair in KL – Book in 60 Seconds!
               </h1>
-              <span className="text-lg md:text-2xl font-thin italy">Affordable Rates | Same-Day Service | 100% Satisfaction.</span>
+              <span className="text-lg md:text-xl font-normal">Affordable Rates | Same-Day Service | 100% Satisfaction.</span>
             </div>
 
 
             <p className=" font-semibold text-lg text-yellow-400 sm:text-xl md:text-2xl ">
-              Aircon not cooling? Don’t sweat it — Certified techs just a click away
+              Aircon not cooling? <br /> <span className="text-white">Don’t sweat it — Certified techs just a click away</span>
             </p>
 
             <p className="text-sm sm:text-base md:text-lg tracking-wide">
               Trusted by 10k+ KL Homeowners & Businesses.
-              <br className="" />
-              Local Technicians | Same-Day Repair | No Hidden Charges
             </p>
 
             <button
