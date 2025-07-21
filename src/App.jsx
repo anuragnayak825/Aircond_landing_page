@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<LandingPage />} />
           <Route path='/thank-you' element={<ThankYou />} />
-          <Route path='/privay-policy' element={<PrivacyPolicy/>}/>
+          <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
 
         </Routes>
       </BrowserRouter>

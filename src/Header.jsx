@@ -44,7 +44,7 @@ export default function Header() {
               src={logo}
               alt="Cool N Cool Logo"
               className="w-[90px] h-[90px] object-contain drop-shadow-md cursor-pointer"
-              onClick={() => { location.pathname.startsWith('/privay-policy')&& window.history.back() }}
+              onClick={() => { location.pathname.startsWith('/privacy-policy')&& window.history.back() }}
             />
             <div className="sm:block">
               <h1 className="text-xs sm:text-xl md:text-xl font-bold leading-tight">

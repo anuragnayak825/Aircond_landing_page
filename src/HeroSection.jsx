@@ -61,9 +61,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-white w-full space-y-4 md:space-y-6 sm:text-left"
+            className="text-white w-full space-y-3 md:space-y-6 sm:text-left"
           >
-            <div className="space-y-4">
+            <div className="md:space-y-4">
               <h1 className="text-2xl sm:text-3xl md:text-[45px] font-semibold text-white ">
                 Fast & Reliable Aircon Repair in KL – Book in 60 Seconds!
               </h1>

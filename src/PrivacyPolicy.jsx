@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from './Header'
 import Footer from "./Footer";
 
 const PrivacyPolicy = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0); // scroll to top when component mounts
+    }, []);
     return (
         <>
-            <Header/>
+            <Header />
 
             <div className="bg-white text-gray-800 py-12 px-4 md:px-12 max-w-7xl mx-auto">
                 <h1 className="text-3xl font-bold mb-6 text-center">Privacy Policy</h1>

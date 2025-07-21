@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from './Header'
 import HeroSection from './HeroSection'
 import CoolTechSection from './CoolTechSection '
@@ -15,6 +15,9 @@ import OfferSection from './OfferSection'
 import ContactACSection from './ContactACSection'
 import CompanyAchievement from './CompanyAchievement'
 export default function LandingPage() {
+  useEffect(() => {
+    window.scrollY(0, 0); // scroll to top when component mounts
+  }, []);
   return (
     <>
       <Header />
@@ -58,7 +61,7 @@ export default function LandingPage() {
       <WhyChooseUs />
       <Steps />
       {/* <AchievementsSection /> */}
-      <CompanyAchievement/>
+      <CompanyAchievement />
       <BlogSlider />
 
       {/* <ContactACSection/> */}
