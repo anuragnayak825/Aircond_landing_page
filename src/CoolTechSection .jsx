@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const CoolTechSection = () => {
     return (
-        <section className="overflow-x-hidden py-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-32 bg-[url('https://cooltech-vite.vercel.app/assets/pattern-2-B9zh0663.png')] bg-no-repeat bg-top bg-cover">
+        <section className="overflow-hidden py-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-32 bg-[url('https://cooltech-vite.vercel.app/assets/pattern-2-B9zh0663.png')] bg-no-repeat bg-top bg-cover">
             <div className="relative max-w-[1440px] mx-auto flex flex-col md:flex-row items-center lg:items-center justify-center gap-y-12 md:gap-x-16">
 
                 {/* Left Column with Image Animation */}
@@ -30,8 +30,7 @@ const CoolTechSection = () => {
                     </div>
 
                     {/* Yellow Stripe */}
-                    <div className="w-[40px] sm:w-[50px] md:w-[60px] absolute top-3 left-[-15px] sm:left-[-24px] -rotate-6 h-[43vh] sm:h-[65vh] md:h-[70vh] bg-[#ffc513]"></div>
-
+                   
                     {/* Call Box */}
                     <div className="absolute top-6 left-6 z-[20] bg-white shadow-xl border-[#ffc513] p-4 pl-5 flex items-center space-x-3 max-w-[270px] rounded-md">
                         <div className="bg-[#ffc513] p-2 rounded text-white">

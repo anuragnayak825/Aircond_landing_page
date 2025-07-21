@@ -28,8 +28,8 @@ const achievements = [
   {
     id: 4,
     icon: <FaHandshake className="text-black text-4xl" />,
-    number: "99",
-    label: "Happy Clients (%)",
+    number: "99%",
+    label: "Happy Clients",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function CompanyAchievementSection() {
           {achievements.map((item) => (
             <div
               key={item.id}
-              className="group bg-white w-full max-w-[230px] flex flex-col justify-center items-center relative pt-14 pb-8 px-4 rounded-md shadow-md"
+              className=" bg-white w-full max-w-[230px] flex flex-col justify-center items-center relative pt-14 pb-8 px-4 rounded-md shadow-md"
             >
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white border border-gray-300 p-4 w-20 h-20 flex items-center justify-center shadow-md rounded">
                 {item.icon}
@@ -83,7 +83,7 @@ export default function CompanyAchievementSection() {
       <img
         src="https://themesflat.co/html/inverna/image/section/section-how-it-work-h2-3.png"
         alt="Decorative Shape"
-        className="absolute bottom-0 right-0 hidden md:block sm:right-10 w-40 sm:w-36 lg:w-72 z-20"
+        className="absolute bottom-0 right-0 hidden md:block sm:right-0 w-40 sm:w-36 lg:w-72 z-20"
       />
 
       {/* Worker Image */}
