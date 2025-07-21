@@ -110,3 +110,7 @@ button {
 .animate-orbit-once {
   animation: orbitOnce 1s ease-in-out forwards;
 }
+
+.italy{
+  font-style: italic;
+}

@@ -56,27 +56,29 @@ export default function HeroSection() {
       {/* 🔷 Content (Text + Form) */}
       <div className="relative w-full flex flex-col lg:flex-row hero-row-layout justify-center items-center gap-4 md:gap-8 lg:ga xl:gap-10 2xl:gap-10 px-4 sm:px-6 md:px-10 lg: xl:px-20 2xl:px-28 pt-3 pb-6 sm:pt-10 sm:pb-10 lg:pt-10 lg:pb-8 z-10 overflow-hidden">
         {/* 🔹 Text Section */}
-        <div className="overflow-hidden w-full lg:max-w-xl">
+        <div className="overflow-hidden w-full lg:max-w-[1000px] ">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-white max-w-lg space-y-4 sm:text-left"
+            className="text-white w-full space-y-4 md:space-y-6 sm:text-left"
           >
-            <h1 className="text-2xl sm:text-3xl md:text-[43px] font-semibold leading-snug">
-              Professional Aircon Services You Can Rely On –{" "}
-              <span className="text-yellow-400">(KL)</span>
-            </h1>
+            <div>
+              <h1 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-white ">
+                Fast & Reliable Aircon Repair in KL – Book in 60 Seconds!
+              </h1>
+              <span className="text-lg md:text-2xl font-thin italy">Affordable Rates | Same-Day Service | 100% Satisfaction.</span>
+            </div>
 
-            <p className=" font-semibold text-lg text-yellow-400 sm:text-xl md:text-2xl hidden sm:block">
-              Aircon Not Cooling?{" "}
-              <span className=" text-white">We’ve Got You Covered</span>
+
+            <p className=" font-semibold text-lg text-yellow-400 sm:text-xl md:text-2xl ">
+              Aircon not cooling? Don’t sweat it — Certified techs just a click away
             </p>
 
             <p className="text-sm sm:text-base md:text-lg tracking-wide">
-              Professional air conditioner servicing and repair in Kuala Lumpur.
-              <br className="hidden sm:block" />
-              Prompt, clean, and customer-friendly technicians.
+              Trusted by 10k+ KL Homeowners & Businesses.
+              <br className="" />
+              Local Technicians | Same-Day Repair | No Hidden Charges
             </p>
 
             <button
@@ -85,7 +87,7 @@ export default function HeroSection() {
               }}
               className="relative mt-2 px-6 py-3 border border-white text-white font-semibold hover:border-blue-700 rounded shadow transition duration-300 text-sm sm:text-base overflow-hidden group"
             >
-              <span className="relative z-10">CALL TECHNICIAN →</span>
+              <span className="relative z-10">Call a Technician Now  →</span>
 
               {/* Left Side Overlay */}
               <span className="absolute inset-y-0 left-1/2 w-0 group-hover:w-1/2  bg-blue-700 transition-all duration-300 origin-left"></span>
@@ -98,7 +100,7 @@ export default function HeroSection() {
         </div>
 
         {/* 🔹 Contact Form Section */}
-        <div className="overflow-hidden w-full lg:max-w-xl lg:flex justify-end ">
+        <div className="overflow-hidden w-full lg:max-w-[500px] lg:flex justify-end  ">
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
