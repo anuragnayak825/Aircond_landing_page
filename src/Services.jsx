@@ -82,16 +82,16 @@ const cardVariants = {
 
 export default function Services() {
     return (
-        <div className='w-full py-10 px-4 '>
+        <div className='w-full py-10 px-4'>
             {/* Heading */}
             <div className='flex flex-col justify-center items-center mb-10'>
                 <div className="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-2 mb-2">
-                    <p className="text-[#ffc513] font-semibold uppercase tracking-wider font-serif text-3xl">
+                    <p className="text-black font-semibold uppercase tracking-wider font-serif text-3xl">
                         Quality services
                     </p>
                     <hr className="border border-[#ffc513] w-10 mt-2 lg:mt-1" />
                 </div>
-                <p className='text-lg font-semibold tracking-wide text-center px-2'>
+                <p className='text-lg w-full max-w-3xl font-semibold tracking-wide text-center px-2'>
                     We provide expert air conditioning maintenance to keep your system running smoothly, efficiently, and reliably all year round.
                 </p>
             </div>
@@ -106,14 +106,14 @@ export default function Services() {
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
                         variants={cardVariants}
-                        className='relative group w-full max-w-xs h-auto py-3.5 bg-gradient-to-b from-[#ccc8c8] to-[#f7f7f7] rounded-ee-[100px] px-5 shadow-md'
+                        className='relative group w-full max-w-xs h-auto py-3.5 bg-blue-50 rounded-ee-[100px] px-5 shadow-md'
                     >
                         {/* Image */}
-                        <div className='w-[140px] h-auto absolute -top-[10%] left-[10%]'>
+                        <div className='w-[140px] h-auto absolute -top-[10%] left-[10%] group-hover:-translate-y-2.5 transform transition-transform duration-300'>
                             <motion.img
                                 src={ele.image}
                                 alt={ele.title}
-                                className='w-[140px] relative rounded-tr-[50px] object-cover'
+                                className='w-[140px] relative rounded-tr-[50px] object-cover '
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.3 }}
                             />

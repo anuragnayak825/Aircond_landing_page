@@ -39,28 +39,27 @@ export default function WhyChooseUs() {
       viewport={{ once: true }}
     >
       <div className="max-w-4xl mx-auto text-center mb-16">
-
-        <p className=" font-bold text-2xl sm:text-4xl mb-1">
+        <p className="font-bold text-2xl sm:text-4xl mb-1">
           The Advantage of Working With Us
         </p>
-
-        <h2 className="text-sm  font-medium text-gray-500 mt-4">
+        <h2 className="text-sm font-medium text-gray-500 mt-4">
           From residential spaces to commercial environments, we understand the demands of Malaysia’s climate. Our AC services combine speed, reliability, and expertise — giving you cooling that fits your lifestyle.
         </h2>
       </div>
 
-      {/* Responsive Card Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:gap-16 gap-16 justify-items-center">
+      {/* Card Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 justify-items-center">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="w-[270px] sm:w-full flex flex-col items-center group cursor-pointer"
+            className="w-[270px] sm:w-full flex flex-col items-center cursor-pointer"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.2, duration: 0.6, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
             <div className="group/card transition-all duration-300 flex flex-col items-center">
+              {/* Card Body */}
               <div className="relative w-full text-center py-14 px-4 transition-all duration-300
                 flex flex-col justify-between min-h-[280px] bg-gray-100 text-[#0c2340]
                 group-hover/card:bg-[#ffc513] group-hover/card:text-white group-hover:shadow-xl rounded-md"
@@ -83,14 +82,17 @@ export default function WhyChooseUs() {
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-5 h-5 rotate-45 bg-gray-100 group-hover/card:bg-[#ffc513] transition-all duration-300"></div>
               </div>
 
-              {/* Buttons */}
-              <div className="mt-6 flex text-sm font-semibold group-hover/card:scale-[1.02] transition-transform duration-500">
+              {/* Buttons - inside group/card to scope hover properly */}
+              <div className="mt-6 flex text-sm font-semibold transition-transform duration-500 group-hover/card:scale-[1.02]">
+                {/* ID button */}
                 <span className="relative w-12 px-4 py-2 text-center text-white overflow-hidden z-10">
                   <span className="relative z-10">{service.id}</span>
                   <span className="absolute inset-0 bg-[#ffc513] -translate-x-full group-hover/card:translate-x-0 transition-transform duration-500 ease-in-out z-0"></span>
                   <span className="absolute inset-0 bg-[#0c2340] z-[-1]"></span>
                 </span>
-                <a href='#' className="relative w-32 px-4 py-2 text-center text-white overflow-hidden z-10">
+
+                {/* More Details button */}
+                <a href="#" className="relative w-32 px-4 py-2 text-center text-white overflow-hidden z-10">
                   <span className="relative z-10">More Details</span>
                   <span className="absolute inset-0 bg-[#0c2340] -translate-x-full group-hover/card:translate-x-0 transition-transform duration-500 ease-in-out z-0"></span>
                   <span className="absolute inset-0 bg-[#ffc513] z-[-1]"></span>

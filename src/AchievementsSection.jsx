@@ -24,7 +24,7 @@ export default function AchievementsSection() {
                     viewport={{ once: true }}
                 >
                     <div className="flex lg:flex-row items-center lg:items-center justify-center lg:justify-center space-x-0 lg:space-x-2">
-                        <p className="text-[#ffc513] font-semibold uppercase tracking-wider font-serif text-sm sm:text-base lg:text-3xl">Our Track Record</p>
+                        <p className="text-white font-semibold uppercase tracking-wider font-serif text-sm sm:text-base lg:text-3xl">Our Track Record</p>
                         <hr className="border border-[#ffc513] w-10 mt-2 lg:mt-1" />
                     </div>
                 </motion.div>

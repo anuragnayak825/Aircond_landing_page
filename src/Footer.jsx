@@ -8,7 +8,8 @@ import {
     FaPhoneAlt,
 } from 'react-icons/fa';
 import logo from './assets/logo-ac.webp';
-
+import { FaArrowRightArrowLeft } from 'react-icons/fa6';
+import { NavLink } from 'react-router-dom';
 const services = [
     'Aircon Servicing',
     'Aircon Repair',
@@ -43,7 +44,7 @@ const Footer = () => {
                 {/* Service */}
                 <div>
                     <h3 className="text-white font-semibold text-lg mb-3 flex items-center gap-2">
-                        Service <span className="w-5 h-[2px] bg-orange-500"></span>
+                        Service <span className="w-5 h-[2px] bg-yellow-400"></span>
                     </h3>
                     <ul className="space-y-2 text-sm text-gray-300">
                         {services.map((item, idx) => (
@@ -55,22 +56,22 @@ const Footer = () => {
                 {/* Contact */}
                 <div>
                     <h3 className="text-white font-semibold text-lg mb-3 flex items-center gap-2">
-                        Contact <span className="w-5 h-[2px] bg-orange-500"></span>
+                        Contact <span className="w-5 h-[2px] bg-yellow-400"></span>
                     </h3>
                     <ul className="text-sm text-gray-300 space-y-3">
                         <li>Aircon Service provider in the Kuala Lumpur and Selangor regions.</li>
                         <li className="flex items-center gap-2">
-                            <FaEnvelope className="text-orange-500" />
+                            <FaEnvelope className="text-white text-xl" />
                             info@accoolncool.com <br />accoolncool@gmail.com
                         </li>
                         <li className="flex items-center gap-2">
-                            <FaPhoneAlt className="text-orange-500" /> +60 16-382 4522
+                            <FaPhoneAlt className="text-white text-xl" /> +60 16-382 4522
+                        </li>
+                        <li className="flex items-center gap-2 text-lg font-medium ml-2">
+                            <NavLink to={'/privay-policy'}> Privacy Policy</NavLink>
                         </li>
                     </ul>
                 </div>
-
-                {/* Gallery */}
-
             </div>
         </footer>
     );

@@ -47,36 +47,40 @@ const Steps = () => {
           {steps.map((step) => (
             <div
               key={step.id}
-              className="w-72 sm:w-80 text-center relative group transition-transform duration-300 hover:scale-105"
+              className="w-72 sm:w-80 text-center relative  "
             >
-              {/* Circle with icon */}
-              <div className="relative w-40 sm:w-44 h-40 sm:h-44 mx-auto">
+              {/* Orbit + Icon */}
+              <div className="relative group w-44 h-44 mx-auto">
+                {/* Orbit Ring */}
                 <div
-                  className="absolute inset-0 rounded-full border-t-[2px] border-gray-200
-                    transition-transform duration-700 ease-in-out group-hover:rotate-180 group-hover:border-[#ffc513]"
+                  className="absolute inset-0 rounded-full border-t-[2px] border-gray-200 
+                  transition-all duration-700 ease-in-out group-hover:rotate-[180deg] group-hover:border-[#ffc513]"
                 ></div>
 
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 sm:w-32 sm:h-32 bg-gray-100 text-[#ffc513] group-hover:text-white group-hover:bg-[#ffc513] rounded-full flex items-center justify-center z-10">
+                {/* Center Icon */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gray-100 text-[#ffc513] group-hover:bg-[#ffc513] group-hover:text-white rounded-full flex items-center justify-center shadow-lg z-10 transition-all duration-500">
                   {step.icon}
                 </div>
 
+                {/* Orbiting Badge */}
                 <div
-                  className="absolute bottom-5 left-6 bg-blue-900 text-white text-xs sm:text-sm font-bold w-7 h-7 sm:w-8 sm:h-8 
-                    rounded-full flex items-center justify-center z-20 shadow-md
-                    transition-all duration-700 ease-in-out 
-                    group-hover:top-[24px] group-hover:left-[110px] group-hover:bottom-auto"
+                  className="absolute w-8 h-8 bg-blue-900 text-white text-sm font-bold 
+  rounded-full flex items-center justify-center shadow-md z-20
+  transition-all duration-700 ease-in-out
+  opacity-40 group-hover:opacity-100
+  bottom-5 left-6 group-hover:bottom-[128px] group-hover:left-[100px]"
                 >
                   {step.id.toString().padStart(2, '0')}
                 </div>
               </div>
 
               {/* Title */}
-              <p className="mt-5 text-[16px] sm:text-base font-semibold text-white leading-snug">
+              <p className="mt-6 text-lg sm:text-xl font-semibold text-white leading-snug">
                 {step.title}
               </p>
 
               {/* Description */}
-              <p className="mt-2 text-[16px] text-white/80 px-3 leading-relaxed">
+              <p className="mt-3 text-[16px] text-white/80 px-3 leading-relaxed">
                 {step.description}
               </p>
             </div>

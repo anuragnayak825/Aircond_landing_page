@@ -28,7 +28,7 @@ export default function HeroSection() {
   };
 
   return (
-    <div id="Hero" className="relative w-full h-fit lg:min-h-screen overflow-hidden">
+    <div id="Hero" className="relative w-full h-fit lg:min-h-[90vh] overflow-hidden">
       {/* 🔷 Background Swiper */}
       <div className="absolute top-0 left-0 w-full h-full -z-10">
         <Swiper
@@ -54,23 +54,23 @@ export default function HeroSection() {
       </div>
 
       {/* 🔷 Content (Text + Form) */}
-      <div className="relative w-full flex flex-col lg:flex-row hero-row-layout justify-center items-center gap-4 md:gap-8 lg:gap-10 xl:gap-10 2xl:gap-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28 pt-3 pb-6 sm:pt-10 sm:pb-10 lg:pt-16 lg:pb-10 z-10 overflow-hidden">
+      <div className="relative w-full flex flex-col lg:flex-row hero-row-layout justify-center items-center gap-4 md:gap-8 lg:ga xl:gap-10 2xl:gap-10 px-4 sm:px-6 md:px-10 lg: xl:px-20 2xl:px-28 pt-3 pb-6 sm:pt-10 sm:pb-10 lg:pt-10 lg:pb-8 z-10 overflow-hidden">
         {/* 🔹 Text Section */}
-        <div className="overflow-hidden w-full">
+        <div className="overflow-hidden w-full lg:max-w-xl">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-white max-w-lg space-y-4 sm:text-left"
           >
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-snug">
+            <h1 className="text-2xl sm:text-3xl md:text-[43px] font-semibold leading-snug">
               Professional Aircon Services You Can Rely On –{" "}
               <span className="text-yellow-400">(KL)</span>
             </h1>
 
-            <p className="text-base text-red-400 sm:text-xl md:text-2xl hidden sm:block">
+            <p className=" font-semibold text-lg text-yellow-400 sm:text-xl md:text-2xl hidden sm:block">
               Aircon Not Cooling?{" "}
-              <span className=" text-white font-semibold">We’ve Got You Covered</span>
+              <span className=" text-white">We’ve Got You Covered</span>
             </p>
 
             <p className="text-sm sm:text-base md:text-lg tracking-wide">
@@ -79,30 +79,26 @@ export default function HeroSection() {
               Prompt, clean, and customer-friendly technicians.
             </p>
 
-            <motion.button
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.95 }}
-              animate={{
-                scale: [1, 1.05, 1],
-                boxShadow: [
-                  "0 0 0px rgba(255,255,255,0)",
-                  "0 0 20px rgba(255,0,0,0.5)",
-                  "0 0 0px rgba(255,255,255,0)",
-                ],
-              }}
-              transition={{ repeat: Infinity, duration: 2 }}
+            <button
               onClick={() => {
                 window.location.href = "tel:+60163824522";
               }}
-              className="mt-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded shadow transition duration-300 text-sm sm:text-base"
+              className="relative mt-2 px-6 py-3 border border-white text-white font-semibold hover:border-blue-700 rounded shadow transition duration-300 text-sm sm:text-base overflow-hidden group"
             >
-              CALL TECHNICIAN →
-            </motion.button>
+              <span className="relative z-10">CALL TECHNICIAN →</span>
+
+              {/* Left Side Overlay */}
+              <span className="absolute inset-y-0 left-1/2 w-0 group-hover:w-1/2  bg-blue-700 transition-all duration-300 origin-left"></span>
+
+              {/* Right Side Overlay */}
+              <span className="absolute inset-y-0 right-1/2 w-0 group-hover:w-1/2 bg-blue-700 transition-all duration-300 origin-right"></span>
+            </button>
+
           </motion.div>
         </div>
 
         {/* 🔹 Contact Form Section */}
-        <div className="overflow-hidden w-full">
+        <div className="overflow-hidden w-full lg:max-w-xl lg:flex justify-end ">
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -117,13 +113,13 @@ export default function HeroSection() {
       {/* 🔘 Swiper Arrows */}
       <button
         onClick={handlePrev}
-        className="absolute hidden lg:flex top-1/2 h-10 w-10 left-2 transform -translate-y-1/2 bg-white/70 text-black hover:bg-white p-2 shadow-lg z-30 rounded-full"
+        className="absolute hidden lg:flex justify-center items-center top-1/2 h-14 w-8 left-0 transform -translate-y-1/2 bg-white/70 text-black hover:bg-white p-2 shadow-lg z-30 rounded-e-lg "
       >
         <FaChevronLeft className="text-lg" />
       </button>
       <button
         onClick={handleNext}
-        className="absolute hidden lg:flex top-1/2 h-10 w-10 right-2 transform -translate-y-1/2 bg-white/70 text-black hover:bg-white p-2 shadow-lg z-30 rounded-full"
+        className="absolute hidden lg:flex justify-center items-center top-1/2 h-14 w-8 right-0 transform -translate-y-1/2 bg-white/70 text-black hover:bg-white p-2 shadow-lg z-30 rounded-s-lg "
       >
         <FaChevronRight className="text-lg" />
       </button>

@@ -58,33 +58,28 @@ export default function OpenIconSpeedDial() {
           direction="up"
         >
           <SpeedDialAction
-            icon={<WhatsAppIcon />}
+            icon={<WhatsAppIcon sx={{ fontSize: 38 }} />}
             tooltipTitle="WhatsApp"
             onClick={handleWhatsAppClick}
             sx={{
               bgcolor: '#25D366',
               color: '#fff',
+              width: 56,
+              height: 56,
               '&:hover': { bgcolor: '#25D366', opacity: 0.9 },
             }}
           />
           <SpeedDialAction
-            icon={<CallIcon />}
+            icon={<CallIcon sx={{ fontSize: 38 }} />}
             tooltipTitle="Call"
             onClick={handleCallClick}
             sx={{
               bgcolor: '#007bff',
               color: '#fff',
+               width: 56,
+              height: 56,
+              fontSize: '50px',
               '&:hover': { bgcolor: '#007bff', opacity: 0.9 },
-            }}
-          />
-          <SpeedDialAction
-            icon={<KeyboardArrowUpIcon />}
-            tooltipTitle="Go to Top"
-            onClick={handleScrollTop}
-            sx={{
-              bgcolor: '#6c757d',
-              color: '#fff',
-              '&:hover': { bgcolor: '#6c757d', opacity: 0.9 },
             }}
           />
         </SpeedDial>

@@ -1,3 +1,15 @@
+@media (min-width: 586px) and (max-width: 756px) {
+  .hero-row-layout {
+    flex-direction: column !important;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .hero-row-layout>div {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
 @media (min-width: 756px) and (max-width: 1025px) {
   .hero-row-layout {
     flex-direction: row !important;
@@ -82,4 +94,19 @@ button {
     75% { transform: translateX(-2px); }
     100% { transform: translateX(0); }
   }
+}
+
+
+@keyframes orbitOnce {
+  0% {
+    transform: rotate(0deg) translateX(70px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(70px) rotate(-360deg);
+  }
+}
+
+/* Tailwind extension: add this utility in your index.css or global CSS */
+.animate-orbit-once {
+  animation: orbitOnce 1s ease-in-out forwards;
 }

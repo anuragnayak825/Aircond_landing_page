@@ -103,7 +103,7 @@ export default function CombinedServicesAndOffer() {
               className="px-6 py-3 rounded-xl text-black zoomin-out font-bold bg-gradient-to-r from-[#f49934] to-[#ffab18] shadow-lg hover:scale-105 transition-transform duration-300 flex items-center gap-2"
             >
               <FaBolt className="text-white drop-shadow" />
-              Get a FREE 20 PSI GAS TOP UP FREE
+              GET a FREE 20 PSI GAS TOP UP 
             </button>
           </div>
         </div>

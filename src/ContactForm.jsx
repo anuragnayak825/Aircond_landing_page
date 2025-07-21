@@ -61,7 +61,7 @@ export default function ContactForm() {
 
     try {
       await fetch(
-        `https://script.google.com/macros/s/AKfycbzH8HDYbGUf5VHw09Sd9d084--ZbmGPNl-oFvDW41TZ2oNCp6asxBn1FCoLAXBuD2vuyg/exec?${queryString}`,
+        `https://script.google.com/macros/s/AKfycbx_wrUZGEGspgPNSA22uCK_Cu70gejhyKQYF2nZPgWn2TbHShgIVYQjBrwO3oRA3wmR/exec?${queryString}`,
         {
           method: "GET",
           mode: "no-cors",
@@ -100,7 +100,7 @@ export default function ContactForm() {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="w-full max-w-md backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl p-6 sm:p-8 space-y-6 text-white overflow-hidden"
+      className="w-full backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl p-6 sm:p-8 space-y-6 text-white overflow-hidden"
     >
       <h2 className="text-2xl sm:text-3xl font-bold text-center">Get Help Instantly!</h2>
 

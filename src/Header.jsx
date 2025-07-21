@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
 import logo from './assets/logo-ac.webp';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Header() {
+  const location = useLocation()
+  const [isPrivacy, setisPrivacy] = useState(false)
+  
   return (
     <>
       {/* 🔁 Zoom Animation Keyframes */}
@@ -32,14 +36,15 @@ export default function Header() {
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="w-full sticky top-0 bg-[#1c63b8] shadow-xl z-50"
       >
-        <div className="max-w-[1280px] mx-auto flex md:flex-row justify-between items-center px-6 sm:px-8 md:px-12 lg:px-16 py-1 gap-4">
+        <div className="max-w-[1280px] mx-auto flex md:flex-row justify-between items-center px-6 sm:px-8 md:px-12 lg:px-10 py-1 gap-4">
 
           {/* Logo & Brand */}
           <div className="flex items-center gap-3">
             <img
               src={logo}
               alt="Cool N Cool Logo"
-              className="w-[90px] h-[90px] object-contain drop-shadow-md"
+              className="w-[90px] h-[90px] object-contain drop-shadow-md cursor-pointer"
+              onClick={() => { location.pathname.startsWith('/privay-policy')&& window.history.back() }}
             />
             <div className="sm:block">
               <h1 className="text-xs sm:text-xl md:text-xl font-bold leading-tight">
@@ -51,9 +56,12 @@ export default function Header() {
             </div>
           </div>
 
+
+
+
           {/* Contact Buttons */}
           <div className="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6">
-            
+
             {/* 📞 Phone Button */}
             <motion.a
               whileHover={{ scale: 1.05 }}

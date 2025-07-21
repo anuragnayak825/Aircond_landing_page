@@ -106,7 +106,7 @@ const CoolTechSection = () => {
                     >
                         <button
                             onClick={() => { window.location.href = 'tel:+60163824522' }}
-                            className="bg-[#ffc513] hover:bg-[#e6b300] text-white font-bold px-6 py-3 rounded-md shadow-md transition-all text-sm sm:text-base"
+                            className="bg-[#ffc513] hover:bg-[#e6b300] text-black text-lg font-bold px-6 py-3 rounded-md shadow-md transition-all sm:text-base"
                         >
                             Contact Us
                         </button>
