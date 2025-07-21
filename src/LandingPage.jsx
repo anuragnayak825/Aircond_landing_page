@@ -15,9 +15,7 @@ import OfferSection from './OfferSection'
 import ContactACSection from './ContactACSection'
 import CompanyAchievement from './CompanyAchievement'
 export default function LandingPage() {
-  useEffect(() => {
-    window.scrollY(0, 0); // scroll to top when component mounts
-  }, []);
+  
   return (
     <>
       <Header />
