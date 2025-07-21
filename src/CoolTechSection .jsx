@@ -30,7 +30,7 @@ const CoolTechSection = () => {
                     </div>
 
                     {/* Yellow Stripe */}
-                   
+
                     {/* Call Box */}
                     <div className="absolute top-6 left-6 z-[20] bg-white shadow-xl border-[#ffc513] p-4 pl-5 flex items-center space-x-3 max-w-[270px] rounded-md">
                         <div className="bg-[#ffc513] p-2 rounded text-white">
@@ -61,8 +61,8 @@ const CoolTechSection = () => {
                     </div>
 
                     {/* Title */}
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-blue-900 leading-snug mb-4">
-                        Reliable Aircon Repair <br className="hidden sm:block" /> & Installation
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-4xl font-bold text-blue-900 leading-snug mb-4">
+                        Reliable Aircon Service , Repair <br className="hidden sm:block" /> & Installation
                     </h2>
 
                     {/* Description */}

@@ -25,7 +25,7 @@ const Footer = () => {
                         />
                         <input
                             type="text"
-                            placeholder='Enter Your Email'
+                            placeholder='Enter Your Phone No.'
                             className='px-3.5 py-2 border mb-3 italic border-gray-300 shadow-inner outline-0 bg-white w-full'
                         />
                         <textarea
@@ -57,7 +57,7 @@ const Footer = () => {
                             <li className="flex items-start gap-2">
                                 <FaEnvelope className="text-white text-xl mt-1" />
                                 <span className='text-lg'>
-                                    info@accoolncool.com ,
+                                    info@accoolncool.com &
                                     accoolncool@gmail.com
                                 </span>
                             </li>

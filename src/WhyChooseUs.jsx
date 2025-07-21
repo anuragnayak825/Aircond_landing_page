@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
           The Advantage of Working With Us
         </p>
         <h2 className="text-sm font-medium text-gray-500 mt-4">
-          From residential spaces to commercial environments, we understand the demands of Malaysia’s climate. Our AC services combine speed, reliability, and expertise — giving you cooling that fits your lifestyle.
+          From residential spaces to commercial environments, we understand the demands of Malaysia’s climate. Our Aircond services combine speed, reliability, and expertise — giving you cooling that fits your lifestyle.
         </h2>
       </div>
 
