@@ -36,7 +36,7 @@ export default function Header() {
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="w-full sticky top-0 bg-[#1c63b8] shadow-xl z-50"
       >
-        <div className="max-w-[1280px] mx-auto flex md:flex-row justify-between items-center px-6 sm:px-8 md:px-12 lg:px-10 py-1 gap-4">
+        <div className="w-full mx-auto flex md:flex-row justify-between items-center px-6 sm:px-8 md:px-20 lg:px-10 py-1 gap-4">
 
           {/* Logo & Brand */}
           <div className="flex items-center gap-3">

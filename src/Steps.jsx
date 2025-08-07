@@ -63,15 +63,7 @@ const Steps = () => {
                 </div>
 
                 {/* Orbiting Badge */}
-                <div
-                  className="absolute w-8 h-8 bg-blue-900 text-white text-sm font-bold 
-  rounded-full flex items-center justify-center shadow-md z-20
-  transition-all duration-700 ease-in-out
-  opacity-40 group-hover:opacity-100
-  bottom-5 left-6 group-hover:bottom-[128px] group-hover:left-[100px]"
-                >
-                  {step.id.toString().padStart(2, '0')}
-                </div>
+               
               </div>
 
               {/* Title */}

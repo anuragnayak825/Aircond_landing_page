@@ -1,18 +1,12 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import SpeedDial from '@mui/material/SpeedDial';
-import SpeedDialIcon from '@mui/material/SpeedDialIcon';
-import SpeedDialAction from '@mui/material/SpeedDialAction';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import CallIcon from '@mui/icons-material/Call';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import Fab from '@mui/material/Fab';
 import Stack from '@mui/material/Stack';
 
-export default function OpenIconSpeedDial() {
-  const isMobile = useMediaQuery('(max-width:600px)');
-
+export default function SupportFloatingButtons() {
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/+60163824522', '_blank');
   };
@@ -34,56 +28,34 @@ export default function OpenIconSpeedDial() {
         zIndex: 1000,
       }}
     >
-      {isMobile ? (
-        <Stack spacing={1}>
-          <Fab
-            onClick={handleWhatsAppClick}
-            sx={{ bgcolor: '#25D366', color: '#fff', '&:hover': { bgcolor: '#25D366', opacity: 0.9 } }}
-            size="medium"
-          >
-            <WhatsAppIcon />
-          </Fab>
-          <Fab
-            onClick={handleCallClick}
-            sx={{ bgcolor: '#007bff', color: '#fff', '&:hover': { bgcolor: '#007bff', opacity: 0.9 } }}
-            size="medium"
-          >
-            <CallIcon />
-          </Fab>
-        </Stack>
-      ) : (
-        <SpeedDial
-          ariaLabel="Support Actions"
-          icon={<SpeedDialIcon />}
-          direction="up"
+      <Stack spacing={1}>
+        <Fab
+          onClick={handleWhatsAppClick}
+          sx={{
+            bgcolor: '#25D366',
+            width: 56,
+            height: 56,
+            color: '#fff',
+            '&:hover': { bgcolor: '#25D366', opacity: 0.9 },
+          }}
+          size="medium"
         >
-          <SpeedDialAction
-            icon={<WhatsAppIcon sx={{ fontSize: 38 }} />}
-            tooltipTitle="WhatsApp"
-            onClick={handleWhatsAppClick}
-            sx={{
-              bgcolor: '#25D366',
-              color: '#fff',
-              width: 56,
-              height: 56,
-              '&:hover': { bgcolor: '#25D366', opacity: 0.9 },
-            }}
-          />
-          <SpeedDialAction
-            icon={<CallIcon sx={{ fontSize: 38 }} />}
-            tooltipTitle="Call"
-            onClick={handleCallClick}
-            sx={{
-              bgcolor: '#007bff',
-              color: '#fff',
-               width: 56,
-              height: 56,
-              fontSize: '50px',
-              '&:hover': { bgcolor: '#007bff', opacity: 0.9 },
-            }}
-          />
-        </SpeedDial>
-      )}
+          <WhatsAppIcon sx={{ fontSize: 35 }} />
+        </Fab>
+        <Fab
+          onClick={handleCallClick}
+          sx={{
+            bgcolor: '#007bff',
+            width: 56,
+            height: 56,
+            color: '#fff',
+            '&:hover': { bgcolor: '#007bff', opacity: 0.9 },
+          }}
+          size="medium"
+        >
+          <CallIcon sx={{ fontSize: 35 }} />
+        </Fab>
+      </Stack>
     </Box>
   );
 }

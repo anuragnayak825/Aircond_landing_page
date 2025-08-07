@@ -144,7 +144,7 @@ export default function Services() {
 
 
                         {/* Card Number */}
-                        <h1 className='text-right p-16 text-5xl font-mono text-gray-500 z-10 relative'>
+                        <h1 className='text-right p-16 text-5xl font-mono text-blue-50 z-10 relative'>
                             {ele.id}
                         </h1>
 

@@ -7,61 +7,43 @@ import {
   FaSmile,
   FaStar,
 } from "react-icons/fa";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 import bg_img2 from "./assets/bg-img2.png";
 
+// Your data with `number` as string (we’ll convert in code if needed)
 const achievementsRow1 = [
-  {
-    id: 1,
-    icon: <FaTools className="text-black text-4xl" />,
-    number: "20+",
-    label: "Years of Expertise",
-  },
-  {
-    id: 2,
-    icon: <FaHeadset className="text-black text-4xl" />,
-    number: "24/7",
-    label: "Hour Emergency Support",
-  },
-  {
-    id: 3,
-    icon: <FaBuilding className="text-black text-4xl" />,
-    number: "3,000+",
-    label: "Successfully Installations",
-  },
+  { id: 1, icon: <FaTools className="text-black text-4xl" />, number: "20", label: "Years of Expertise" },
+  { id: 2, icon: <FaHeadset className="text-black text-4xl" />, number: "24", label: "Hour Emergency Support" },
+  { id: 3, icon: <FaBuilding className="text-black text-4xl" />, number: "3000", label: "Successfully Installations" },
 ];
 
 const achievementsRow2 = [
-  {
-    id: 4,
-    icon: <FaSmile className="text-black text-4xl" />,
-    number: "10,000+",
-    label: "Happy Customers Served",
-  },
-  {
-    id: 5,
-    icon: <FaCheckCircle className="text-black text-4xl" />,
-    number: "45-Day",
-    label: "Warranty on All Leak Repairs",
-  },
-  {
-    id: 6,
-    icon: <FaStar className="text-black text-4xl" />,
-    number: "97.99%",
-    label: "Customer Satisfaction Rate",
-  },
+  { id: 4, icon: <FaSmile className="text-black text-4xl" />, number: "10000", label: "Happy Customers Served" },
+  { id: 5, icon: <FaCheckCircle className="text-black text-4xl" />, number: "45", label: "Day Warranty on All Leak Repairs" },
+  { id: 6, icon: <FaStar className="text-black text-4xl" />, number: "97.99", label: "Customer Satisfaction Rate", isDecimal: true },
 ];
 
 export default function CompanyAchievementSection() {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  const renderCountUp = (num, isDecimal = false) => {
+    if (isDecimal) {
+      return <CountUp start={0} end={parseFloat(num)} decimals={2} duration={2} />;
+    }
+    return <CountUp start={0} end={parseInt(num)} duration={2} separator="," />;
+  };
+
   return (
     <section
+      ref={ref}
       className="relative bg-fixed bg-no-repeat bg-cover bg-center text-white py-20 sm:py-28 px-4 sm:px-10 overflow-hidden"
       style={{
         backgroundImage: `
-        linear-gradient(270deg, #00194C 59.9%, rgba(0, 25, 76, 0) 193.33%),
-        url('https://themesflat.co/html/inverna/image/section/section-how-it-work-h2-1.jpg')`,
+          linear-gradient(270deg, #00194C 59.9%, rgba(0, 25, 76, 0) 193.33%),
+          url('https://themesflat.co/html/inverna/image/section/section-how-it-work-h2-1.jpg')`,
       }}
     >
-      {/* Globe Background */}
       <div
         className="absolute inset-0 bg-no-repeat bg-center"
         style={{
@@ -76,8 +58,8 @@ export default function CompanyAchievementSection() {
           </h2>
         </div>
 
-        {/* Row 1: 3 Items */}
-        <div className="flex flex-wrap justify-center  gap-x-6 gap-y-14 sm:gap-16 mb-16">
+        {/* Row 1 */}
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-14 sm:gap-16 mb-16">
           {achievementsRow1.map((item) => (
             <div
               key={item.id}
@@ -86,13 +68,18 @@ export default function CompanyAchievementSection() {
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white border border-gray-300 p-4 w-20 h-20 flex items-center justify-center shadow-md rounded">
                 {item.icon}
               </div>
-              <h3 className="text-3xl font-bold text-blue-900 mt-3">{item.number}</h3>
-              <p className="text-xl mt-4 font-semibold text-gray-600 text-center">{item.label}</p>
+              <h3 className="text-3xl font-bold text-blue-900 mt-3">
+                {inView ? renderCountUp(item.number) : "0"}
+                {item.label.includes("Hour") ? "/7" : item.label.includes("Years") ? "+" : ""}
+              </h3>
+              <p className="text-xl mt-4 font-semibold text-gray-600 text-center">
+                {item.label}
+              </p>
             </div>
           ))}
         </div>
 
-        {/* Row 2: 3 Items */}
+        {/* Row 2 */}
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-14 sm:gap-16 ">
           {achievementsRow2.map((item) => (
             <div
@@ -102,27 +89,29 @@ export default function CompanyAchievementSection() {
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white border border-gray-300 p-4 w-20 h-20 flex items-center justify-center shadow-md rounded">
                 {item.icon}
               </div>
-              <h3 className="text-2xl font-bold text-blue-900 mt-3 text-center">{item.number}</h3>
-              <p className="text-xl mt-4 font-semibold text-gray-600 text-center">{item.label}</p>
+              <h3 className="text-2xl font-bold text-blue-900 mt-3 text-center">
+                {inView ? renderCountUp(item.number, item.isDecimal) : "0"}
+                {item.label.includes("%") ? "%" : item.label.includes("Day") ? "-Day" : item.label.includes("Happy") ? "+" : ""}
+              </h3>
+              <p className="text-xl mt-4 font-semibold text-gray-600 text-center">
+                {item.label}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Decorative Shape */}
+      {/* Decorative Images */}
       <img
         src={bg_img2}
         alt="Worker"
-        className="absolute bottom-0 right-0 w-40 hidden md:block sm:w-52 lg:w-80 "
+        className="absolute bottom-0 right-0 w-40 hidden md:block sm:w-52 lg:w-80"
       />
       <img
         src="https://themesflat.co/html/inverna/image/section/section-how-it-work-h2-3.png"
         alt="Decorative Shape"
-        className="absolute bottom-0 right-0 hidden md:block w-40 sm:w-36 lg:w-72 "
+        className="absolute bottom-0 right-0 hidden md:block w-40 sm:w-36 lg:w-72"
       />
-
-      {/* Worker Image */}
-
     </section>
   );
 }
