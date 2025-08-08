@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const CoolTechSection = () => {
     return (
         <section className="overflow-hidden py-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-32 bg-[url('https://cooltech-vite.vercel.app/assets/pattern-2-B9zh0663.png')] bg-no-repeat bg-top bg-cover">
-            <div className="relative max-w-[1440px] mx-auto flex flex-col md:flex-row items-center lg:items-center justify-center gap-y-12 md:gap-x-16">
+            <div className="relative w-full mx-auto flex flex-col md:flex-row items-center lg:items-center justify-center gap-y-12 md:gap-x-16">
 
                 {/* Left Column with Image Animation */}
                 <motion.div
@@ -13,26 +13,28 @@ const CoolTechSection = () => {
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="relative w-full max-w-xs sm:max-w-sm md:max-w-[360px] flex justify-center lg:justify-end"
+                    className="relative w-full  flex justify-center lg:justify-end"
                 >
                     {/* Main Image */}
-                    <div className="relative z-10">
-                        <img
-                            src="https://cooltech-vite.vercel.app/assets/about2-1-BNuWFb_a.jpg"
-                            alt="AC Installation"
-                            className="w-full"
-                        />
-                        <img
-                            src="https://cooltech-vite.vercel.app/assets/about2-2-CIil4rct.jpg"
-                            alt="AC Maintenance"
-                            className="absolute bottom-0 right-0 w-full max-w-[50%] border-t-8 border-e-8 border-s-8 border-white"
-                        />
-                    </div>
+                    {/* ✅ Mobile & Tablet Image */}
+                    <img
+                        src="https://img.freepik.com/free-photo/team-replacing-old-air-conditioner_482257-78499.jpg"
+                        alt="AC Installation Mobile"
+                        className="w-full rounded-md hidden lg:block"
+                    />
+
+                    {/* ✅ Desktop Image (from lg and up) */}
+                    <img
+                        src="https://img.freepik.com/free-photo/technician-working-air-conditioner_482257-92676.jpg"
+                        alt="AC Installation Desktop"
+                        className="w-full rounded-md lg:hidden"
+                    />
+
 
                     {/* Yellow Stripe */}
 
                     {/* Call Box */}
-                    <div className="absolute top-6 left-6 z-[20] bg-white shadow-xl border-[#ffc513] p-4 pl-5 flex items-center space-x-3 max-w-[270px] rounded-md">
+                    <div className="absolute top-6 left-6 z-[20] bg-white shadow-xl border-[#ffc513] p-4 pl-5 flex items-center space-x-3 max-w-[270px] rounded-md animate-bounce">
                         <div className="bg-[#ffc513] p-2 rounded text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h1.6a2 2 0 011.9 1.4l1.4 4.2a2 2 0 01-.45 2L8.8 12a15.6 15.6 0 006.4 6.4l1.4-1.6a2 2 0 012-.45l4.2 1.4a2 2 0 011.4 1.9V21a2 2 0 01-2 2h-1C10 23 1 14 1 3V2a2 2 0 012-2h.6z" />

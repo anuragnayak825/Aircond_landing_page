@@ -14,8 +14,11 @@ import { FaBolt, FaCheckCircle, FaWhatsapp } from 'react-icons/fa'
 import OfferSection from './OfferSection'
 import ContactACSection from './ContactACSection'
 import CompanyAchievement from './CompanyAchievement'
+import MapWithMarkers from './MapWithMarkers'
+import Residentialandcommericial from './Residentialandcommericial'
+import LocationGrid from './LocationGrid'
 export default function LandingPage() {
-  
+
   return (
     <>
       <Header />
@@ -42,7 +45,7 @@ export default function LandingPage() {
               href="https://wa.me/60163824522"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center text-white bg-[#25D366] font-semibold px-6 py-3 rounded-lg hover:bg-green-500 transition-all duration-200 shadow-md w-full md:w-auto flex items-center justify-center gap-2"
+              className=" text-center text-white bg-[#25D366] font-semibold px-6 py-3 rounded-lg hover:bg-green-500 transition-all duration-200 shadow-md w-full md:w-auto flex items-center justify-center gap-2"
             >
               <FaWhatsapp className="text-xl" />
               Chat on WhatsApp
@@ -55,13 +58,14 @@ export default function LandingPage() {
 
       <OfferSection />
       <Services />
+      <Residentialandcommericial/>
       {/* <ServicesSection /> */}
       <WhyChooseUs />
       <Steps />
       {/* <AchievementsSection /> */}
       <CompanyAchievement />
       <BlogSlider />
-
+      <LocationGrid/>
       {/* <ContactACSection/> */}
       <Footer />
       <OpenIconSpeedDial />

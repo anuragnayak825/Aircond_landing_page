@@ -48,7 +48,7 @@ export default function CombinedServicesAndOffer() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px] z-0" />
 
-      <div className="relative z-10 px-4 md:px-20 pt-20 pb-28">
+      <div className="relative z-10 px-4 md:px-20 pt-10 pb-10">
         {/* Header */}
         <div className="text-center mb-12">
           <h4 className="text-3xl font-bold text-white">Choose Your Comfort Plan</h4>

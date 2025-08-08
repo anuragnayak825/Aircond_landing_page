@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaCheckCircle, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "swiper/css";
 import { motion } from "framer-motion";
 import ContactForm from "./ContactForm";
@@ -63,11 +63,33 @@ export default function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-white w-full space-y-3 md:space-y-6 sm:text-left"
           >
+            <div className="text-xs md:text-xl font-semibold capitalize tracking-wider">
+              <h1 className="bg-yellow-300 px-4 py-0.5 rounded-full text-black w-auto justify-self-start">
+                Malaysia’s Most Reliable Aircon Team
+              </h1>
+            </div>
+
             <div className="md:space-y-4">
               <h1 className="text-2xl sm:text-3xl md:text-[45px] font-semibold text-white ">
                 Fast & Reliable Aircon Repair in KL – Book in 60 Seconds!
               </h1>
-              <span className="text-lg md:text-xl font-normal">Affordable Rates | Same-Day Service | 100% Satisfaction.</span>
+            </div>
+
+            <div className="w-full py-1 flex text-sm md:text-lg tracking-wider italic justify-between max-w-md">
+              <p className="flex justify-center items-center gap-1.5">
+                <FaCheckCircle className="text-yellow-400" /> Affordable Rates
+              </p>
+              <p className="flex justify-center items-center gap-1.5">
+                <FaCheckCircle className="text-yellow-400" /> Same-Day Service
+              </p>
+            </div>
+            <div className="w-full py-1 flex text-sm md:text-lg tracking-wider italic justify-between max-w-md">
+              <p className="flex justify-center items-center gap-1.5">
+                <FaCheckCircle className="text-yellow-400" /> 100% Satisfaction
+              </p>
+              <p className="flex justify-center items-center gap-1.5">
+                <FaCheckCircle className="text-yellow-400" /> 45 Days Warranty
+              </p>
             </div>
 
 

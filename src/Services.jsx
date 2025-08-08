@@ -7,6 +7,7 @@ import {
     FaBolt,
     FaWind,
     FaPhone,
+    FaArrowRight,
 } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
@@ -97,69 +98,50 @@ export default function Services() {
             </div>
 
             {/* Cards */}
-            <div className='grid gap-y-16 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 pt-16 place-items-center '>
-                {services.map((ele, i) => (
-                    <motion.div
-                        key={i}
-                        custom={i}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
-                        variants={cardVariants}
-                        className='relative group w-full max-w-xs h-auto py-3.5 bg-blue-50 rounded-ee-[100px] px-5 shadow-md'
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 px-10 md:px-20 ">
+                {services.map((item, index) => (
+                    <div
+                        key={index}
+                        className="group flex flex-col justify-between border border-gray-200 shadow-md rounded-xl bg-white hover:shadow-2xl transition duration-300"
                     >
-                        {/* Image */}
-                        <div className='w-[140px] h-auto absolute -top-[10%] left-[10%] group-hover:-translate-y-2.5 transform transition-transform duration-300'>
-                            <motion.img
-                                src={ele.image}
-                                alt={ele.title}
-                                className='w-[140px] relative rounded-tr-[50px] object-cover '
-                                whileHover={{ scale: 1.05 }}
-                                transition={{ duration: 0.3 }}
+                        {/* Image Section */}
+                        <div className="relative w-full h-56 sm:h-64 lg:h-72 overflow-hidden rounded-t-xl">
+                            <img
+                                src={item.image}
+                                alt={item.title}
+                                className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
                             />
-                            {/* Image dark overlay - only on desktop */}
-                            <div className='hidden sm:flex absolute inset-0 bg-[#00000188] bg-opacity-80 items-center rounded-tr-[50px] justify-center opacity-0 group-hover:opacity-100 transition duration-300 z-20'></div>
+                            <div className="absolute inset-0 bg-[#000000ab] bg-opacity-20 scale-0 rounded-[100px] group-hover:scale-100 group-hover:rounded-none  origin-top-left transition-all duration-500 ease-in-out rounded-t-xl" />
                         </div>
 
-                        {/* Desktop Hover Overlay */}
-                        <div className='hidden sm:flex absolute inset-0 bg-[#00000188] bg-opacity-80 items-center rounded-ee-[100px] justify-center opacity-0 group-hover:opacity-100 transition duration-300 z-20'>
-                            <button
-                                onClick={() => window.location.href = 'tel:+60163824522'}
-                                className='px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md text-sm font-semibold'
-                            >
-                                Book Now
-                            </button>
+                        {/* Content Section */}
+                        <div className="relative p-6 pt-16 flex flex-col justify-between grow">
+                            {/* Floating Icon */}
+                            <div className="absolute -top-10 left-6 w-20 h-20 bg-white border border-[#00C4CC] shadow-md rounded-full flex justify-center items-center z-10">
+                                < div
+                                    className=" text-3xl object-contain filter invert-[40%] brightness-[0.7] contrast-[1.2]"
+                                >{item?.icon}</div>
+                            </div>
+
+                            {/* Title & Description */}
+                            <div className="flex-grow">
+                                <h3 className="text-xl font-bold text-gray-800 mt-3">{item.title}</h3>
+                                <p className="mt-2 text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                            </div>
+
+                            {/* Button */}
+                            <div className="mt-6">
+                                <button
+                                    onClick={() => {
+                                        window.location.href = "tel:+60163824522";
+                                    }}
+                                    className="bg-[#1574C0] text-white font-medium italic px-5 py-2.5 rounded-full flex items-center hover:bg-[#105b96] transition duration-300"
+                                >
+                                    Explore <FaArrowRight className="ml-2" />
+                                </button>
+                            </div>
                         </div>
-
-                        {/* Mobile Call Icon - vibrate */}
-                        {/* Mobile Call Icon - top right circle button */}
-                        <div className='sm:hidden absolute top-4 right-4 z-30'>
-                            <a
-                                href='tel:+60163824522'
-                                className='w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center animate-vibrate'
-                            >
-                                <FaPhone className='text-blue-600 text-xl' />
-                            </a>
-                        </div>
-
-
-                        {/* Card Number */}
-                        <h1 className='text-right p-16 text-5xl font-mono text-blue-50 z-10 relative'>
-                            {ele.id}
-                        </h1>
-
-                        {/* Title and Icon */}
-                        <div className='w-full h-auto py-2 z-10 relative'>
-                            <span className='text-xl font-bold flex gap-2 items-center text-blue-700'>
-                                {ele.icon} {ele.title}
-                            </span>
-                        </div>
-
-                        {/* Description */}
-                        <p className='text-[17px] text-gray-600 tracking-wide font-semibold mb-3 z-10 relative'>
-                            {ele.description}
-                        </p>
-                    </motion.div>
+                    </div>
                 ))}
             </div>
         </div>

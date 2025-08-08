@@ -10,6 +10,7 @@
     max-width: 100%;
   }
 }
+
 @media (min-width: 756px) and (max-width: 1025px) {
   .hero-row-layout {
     flex-direction: row !important;
@@ -69,7 +70,7 @@ button {
   animation: bounceExpand 1.5s ease-in-out infinite alternate;
 }
 
-@keyframes bounceExpand{
+@keyframes bounceExpand {
 
   0%,
   100% {
@@ -88,11 +89,25 @@ button {
   }
 
   @keyframes vibrate {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-2px); }
-    50% { transform: translateX(2px); }
-    75% { transform: translateX(-2px); }
-    100% { transform: translateX(0); }
+    0% {
+      transform: translateX(0);
+    }
+
+    25% {
+      transform: translateX(-2px);
+    }
+
+    50% {
+      transform: translateX(2px);
+    }
+
+    75% {
+      transform: translateX(-2px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
   }
 }
 
@@ -101,6 +116,7 @@ button {
   0% {
     transform: rotate(0deg) translateX(70px) rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg) translateX(70px) rotate(-360deg);
   }
@@ -111,6 +127,25 @@ button {
   animation: orbitOnce 1s ease-in-out forwards;
 }
 
-.italy{
+.italy {
   font-style: italic;
+}
+
+
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
 }
