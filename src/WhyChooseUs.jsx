@@ -32,14 +32,14 @@ const services = [
 export default function WhyChooseUs() {
   return (
     <motion.section
-      className="w-full py-12 px-4 sm:px-6 bg-white overflow-hidden"
+      className="w-full py-8 px-4 sm:px-6 bg-white overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
       viewport={{ once: true }}
     >
       <div className="max-w-4xl mx-auto text-center mb-16">
-        <p className="font-bold text-2xl sm:text-4xl mb-1">
+        <p className="font-bold text-xl sm:text-4xl mb-1">
           The Advantage of Working With Us
         </p>
         <h2 className="text-sm font-medium text-gray-500 mt-4">

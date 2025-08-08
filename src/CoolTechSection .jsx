@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const CoolTechSection = () => {
     return (
-        <section className="overflow-hidden py-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-32 bg-[url('https://cooltech-vite.vercel.app/assets/pattern-2-B9zh0663.png')] bg-no-repeat bg-top bg-cover">
+        <section className="overflow-hidden py-8 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-32 bg-[url('https://cooltech-vite.vercel.app/assets/pattern-2-B9zh0663.png')] bg-no-repeat bg-top bg-cover">
             <div className="relative w-full mx-auto flex flex-col md:flex-row items-center lg:items-center justify-center gap-y-12 md:gap-x-16">
 
                 {/* Left Column with Image Animation */}

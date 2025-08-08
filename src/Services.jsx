@@ -87,18 +87,18 @@ export default function Services() {
             {/* Heading */}
             <div className='flex flex-col justify-center items-center mb-10'>
                 <div className="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-2 mb-2">
-                    <p className="text-black font-semibold uppercase tracking-wider font-serif text-3xl">
+                    <p className="text-black font-semibold uppercase tracking-wider font-serif text-xl md:text-3xl">
                         Quality services
                     </p>
                     <hr className="border border-[#ffc513] w-10 mt-2 lg:mt-1" />
                 </div>
-                <p className='text-lg w-full max-w-3xl font-semibold tracking-wide text-center px-2'>
+                <p className='text-sm md:text-lg w-full max-w-3xl font-semibold tracking-wide text-center'>
                     We provide expert air conditioning maintenance to keep your system running smoothly, efficiently, and reliably all year round.
                 </p>
             </div>
 
             {/* Cards */}
-            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 px-10 md:px-20 ">
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 px-2 md:px-10 lg:px-20 ">
                 {services.map((item, index) => (
                     <div
                         key={index}

@@ -36,42 +36,21 @@ export default function Header() {
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="w-full sticky top-0  bg-white shadow-xl z-50"
       >
-        <div className="w-full mx-auto flex md:flex-row justify-between items-center px-6 sm:px-8 md:px-10 lg:px-20 py-1 gap-4">
+        <div className="w-full mx-auto flex md:flex-row justify-between items-center pr-4 sm:px-8 md:px-10 lg:px-20 py-1 gap-4">
 
           {/* Logo & Brand */}
           <div className="flex items-center gap-3">
             <img
               src={logo}
               alt="Cool N Cool Logo"
-              className="w-[90px] h-[90px] object-contain drop-shadow-md cursor-pointer"
+              className="w-[90px] h-[90px]  drop-shadow-md cursor-pointer"
               onClick={() => { location.pathname.startsWith('/privacy-policy') && window.history.back() }}
             />
 
           </div>
 
 
-          <ul className=" hidden xl:flex justify-between text-lg capitalize font-semibold tracking-wide italic space-x-5">
-            {['Residential', 'Commercial'].map((item, idx) => (
-              <li
-                key={idx}
-                className="relative group cursor-pointer transition-transform duration-300 ease-in-out"
-              >
-                <NavLink to={'#residential'} className="group-hover:-translate-y-1 transition-transform duration-300 ease-in-out">
-                  {item}
-                </NavLink>
-                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 group-hover:w-full transition-all duration-300 ease-in-out"></span>
-              </li>
-            ))}
-            <li
 
-              className="relative group cursor-pointer transition-transform duration-300 ease-in-out"
-            >
-              <NavLink to={'#residential'} className="group-hover:-translate-y-1 transition-transform duration-300 ease-in-out">
-                Locations
-              </NavLink>
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 group-hover:w-full transition-all duration-300 ease-in-out"></span>
-            </li>
-          </ul>
 
 
           {/* Contact Buttons */}
@@ -116,8 +95,30 @@ export default function Header() {
               </span>
             </motion.a>
 
-          </div>
 
+          </div>
+          <ul className=" hidden xl:flex justify-between text-lg capitalize font-semibold tracking-wide italic space-x-5">
+            {['Residential', 'Commercial'].map((item, idx) => (
+              <li
+                key={idx}
+                className="relative group cursor-pointer transition-transform duration-300 ease-in-out"
+              >
+                <a href='#residential' className="group-hover:-translate-y-1 transition-transform duration-300 ease-in-out">
+                  {item}
+                </a>
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 group-hover:w-full transition-all duration-300 ease-in-out"></span>
+              </li>
+            ))}
+            <li
+
+              className="relative group cursor-pointer transition-transform duration-300 ease-in-out"
+            >
+              <a href='#location' className="group-hover:-translate-y-1 transition-transform duration-300 ease-in-out">
+                Locations
+              </a>
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 group-hover:w-full transition-all duration-300 ease-in-out"></span>
+            </li>
+          </ul>
 
 
         </div>

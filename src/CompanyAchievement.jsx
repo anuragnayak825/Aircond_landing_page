@@ -37,7 +37,7 @@ export default function CompanyAchievementSection() {
   return (
     <section
       ref={ref}
-      className="relative bg-fixed bg-no-repeat bg-cover bg-center text-white py-20 sm:py-28 px-4 sm:px-10 overflow-hidden"
+      className="relative bg-fixed bg-no-repeat bg-cover bg-center text-white py-6 sm:py-10 px-4 sm:px-10 overflow-hidden"
       style={{
         backgroundImage: `
           linear-gradient(270deg, #00194C 59.9%, rgba(0, 25, 76, 0) 193.33%),
@@ -53,7 +53,7 @@ export default function CompanyAchievementSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-3xl sm:text-4xl font-bold mt-2">
+          <h2 className="text-2xl sm:text-4xl font-bold mt-2">
             Company Achievement
           </h2>
         </div>
@@ -63,9 +63,9 @@ export default function CompanyAchievementSection() {
           {achievementsRow1.map((item) => (
             <div
               key={item.id}
-              className="bg-white w-full max-w-[300px] flex flex-col justify-center items-center relative pt-14 pb-8 px-4 rounded-md shadow-md"
+              className=" group bg-white cursor-pointer w-full max-w-[300px] flex flex-col justify-center items-center relative pt-14 pb-8 px-4 rounded-md shadow-md"
             >
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white border border-gray-300 p-4 w-20 h-20 flex items-center justify-center shadow-md rounded">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:-translate-y-[56%] duration-300 transition-transform bg-white border border-gray-300 p-4 w-20 h-20 flex items-center justify-center shadow-md rounded">
                 {item.icon}
               </div>
               <h3 className="text-3xl font-bold text-blue-900 mt-3">
@@ -84,9 +84,9 @@ export default function CompanyAchievementSection() {
           {achievementsRow2.map((item) => (
             <div
               key={item.id}
-              className="bg-white w-full max-w-[300px] flex flex-col justify-center items-center relative pt-14 pb-8 px-4 rounded-md shadow-md"
+              className="bg-white group cursor-pointer w-full max-w-[300px] flex flex-col justify-center items-center relative pt-14 pb-8 px-4 rounded-md shadow-md"
             >
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white border border-gray-300 p-4 w-20 h-20 flex items-center justify-center shadow-md rounded">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:-translate-y-[56%] duration-300 transition-transform bg-white border border-gray-300 p-4 w-20 h-20 flex items-center justify-center shadow-md rounded">
                 {item.icon}
               </div>
               <h3 className="text-2xl font-bold text-blue-900 mt-3 text-center">
