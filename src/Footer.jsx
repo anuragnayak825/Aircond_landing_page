@@ -66,6 +66,11 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
+
+                    <div className='py-1.5 w-full h-full lg:flex  flex-col items-center '>
+                        <button className='w-auto px-3 py-2 tracking-wider italic  bg-yellow-400 text-black text-sm md:text-lg font-semibold rounded-md  '>Claim Your Free 20 PSI Gas Top-Up </button>
+                        <p className=' lg:text-center mt-5 text-lg font-semibold tracking-wider items-center italic'>✔ 45-Day Warranty Includes on the service</p>
+                    </div>
                 </div>
             </footer>
 

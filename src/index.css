@@ -1,1 +1,24 @@
 @import "tailwindcss";
+.btn-wave {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.btn-wave span {
+  display: inline-block;
+}
+
+.btn-wave2:hover span {
+  animation: wave 0.4s ease-in-out;
+}
+
+.btn-wave2:hover span:nth-child(n) {
+  animation-delay: calc(var(--i) * 0.03s);
+}
+
+@keyframes wave {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-6px); }
+  60%  { transform: translateY(3px); }
+  100% { transform: translateY(0); }
+}

@@ -18,6 +18,7 @@ import MapWithMarkers from './MapWithMarkers'
 import Residentialandcommericial from './Residentialandcommericial'
 import LocationGrid from './LocationGrid'
 import Pricing from './Pricing'
+import CTABenar from './CTABenar'
 export default function LandingPage() {
 
   return (
@@ -61,9 +62,10 @@ export default function LandingPage() {
       <Residentialandcommericial />
       {/* <ServicesSection /> */}
       <WhyChooseUs />
-      <Steps />
+      {/* <Steps /> */}
       {/* <AchievementsSection /> */}
       <CompanyAchievement />
+      <CTABenar/>
       <BlogSlider />
       <LocationGrid />
       {/* <ContactACSection/> */}

@@ -23,8 +23,8 @@ export default function SupportFloatingButtons() {
     <Box
       sx={{
         position: 'fixed',
-        bottom: 16,
-        right: 16,
+        bottom: 8,
+        right: 8,
         zIndex: 1000,
       }}
     >
@@ -33,8 +33,8 @@ export default function SupportFloatingButtons() {
           onClick={handleWhatsAppClick}
           sx={{
             bgcolor: '#25D366',
-            width: 56,
-            height: 56,
+            width: 50,
+            height: 50,
             color: '#fff',
             '&:hover': { bgcolor: '#25D366', opacity: 0.9 },
           }}
@@ -46,14 +46,14 @@ export default function SupportFloatingButtons() {
           onClick={handleCallClick}
           sx={{
             bgcolor: '#007bff',
-            width: 56,
-            height: 56,
+            width: 50,
+            height: 50,
             color: '#fff',
             '&:hover': { bgcolor: '#007bff', opacity: 0.9 },
           }}
           size="medium"
         >
-          <CallIcon sx={{ fontSize: 35 }} />
+          <CallIcon sx={{ fontSize: 32 }} />
         </Fab>
       </Stack>
     </Box>
