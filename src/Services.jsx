@@ -88,12 +88,12 @@ export default function Services() {
             <div className='flex flex-col justify-center items-center mb-10'>
                 <div className="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-2 mb-2">
                     <p className="text-black font-semibold uppercase tracking-wider font-serif text-xl md:text-3xl">
-                        Quality services
+                        Aircond services
                     </p>
                     <hr className="border border-[#ffc513] w-10 mt-2 lg:mt-1" />
                 </div>
                 <p className='text-sm md:text-lg w-full max-w-3xl font-semibold tracking-wide text-center'>
-                    We provide expert air conditioning maintenance to keep your system running smoothly, efficiently, and reliably all year round.
+                    We provide expert aircon service , repair , maintenance and Installation to keep your system running smoothly, efficiently, and reliably all year round.
                 </p>
             </div>
 

@@ -34,7 +34,7 @@ const LocationGrid = () => {
   const visibleLocations = locations
 
   return (
-    <div id="location" className="px-6 py-10 bg-white">
+    <div id="location" className="px-6 py-10 bg-gray-50">
       <h2 className="text-3xl font-bold mb-4 text-gray-800 text-center">
         Where You’ll Find Us
       </h2>
@@ -44,7 +44,7 @@ const LocationGrid = () => {
         {visibleLocations.map((location, index) => (
           <div
             key={index}
-            className="bg-blue-50 hover:bg-blue-100 flex items-center italic text-blue-900 text-sm md:text-lg font-medium px-4 py-3 rounded shadow-sm transition duration-200"
+            className="bg-white hover:text-yellow-500 transition-all hover:translate-x-2  transform  flex items-center italic text-blue-900 text-sm md:text-base font-medium px-4 py-2 rounded shadow-md cursor-pointer duration-200"
           >
             <FaLocationArrow className=" hidden sm:block mr-2.5 " /> {location}
           </div>

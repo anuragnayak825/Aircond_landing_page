@@ -20,7 +20,7 @@ const achievementsRow1 = [
 
 const achievementsRow2 = [
   { id: 4, icon: <FaSmile className="text-black text-4xl" />, number: "10000", label: "Happy Customers Served" },
-  { id: 5, icon: <FaCheckCircle className="text-black text-4xl" />, number: "45", label: "Day Warranty on All Leak Repairs" },
+  { id: 5, icon: <FaCheckCircle className="text-black text-4xl" />, number: "45", label: " warranty on water Leaking" },
   { id: 6, icon: <FaStar className="text-black text-4xl" />, number: "97.99", label: "Customer Satisfaction Rate", isDecimal: true },
 ];
 
@@ -91,7 +91,7 @@ export default function CompanyAchievementSection() {
               </div>
               <h3 className="text-2xl font-bold text-blue-900 mt-3 text-center">
                 {inView ? renderCountUp(item.number, item.isDecimal) : "0"}
-                {item.label.includes("%") ? "%" : item.label.includes("Day") ? "-Day" : item.label.includes("Happy") ? "+" : ""}
+                {item.label.includes("Rate") ? "%" : item.label.includes("warranty") ? "-Days" : item.label.includes("Happy") ? "+" : ""}
               </h3>
               <p className="text-xl mt-4 font-semibold text-gray-600 text-center">
                 {item.label}

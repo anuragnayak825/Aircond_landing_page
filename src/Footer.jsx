@@ -16,7 +16,7 @@ const Footer = () => {
             <footer className="bg-[#0c2340] text-white py-10 px-6 sm:px-10">
                 <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center">
 
-                   <ContactForm2/>
+                    <ContactForm2 />
 
                     {/* Right - Contact Info */}
                     <div className='w-full max-w-md italic tracking-wider'>
@@ -41,8 +41,8 @@ const Footer = () => {
                     </div>
 
                     <div className='py-1.5 w-full h-full lg:flex  flex-col items-center '>
-                        <button className='w-auto zoomin-out shadow-sm shadow-yellow-700 px-3 py-2 tracking-wider italic  bg-yellow-400 text-black text-base md:text-lg font-semibold rounded-md  '>Claim Your Free 20 PSI Gas Top-Up </button>
-                        <p className=' lg:text-center mt-5 text-lg font-semibold text-yellow-400 tracking-wider items-center italic'>✔ 45-Day Warranty Includes on the service</p>
+                        <button onClick={() => { window.location.href = "tel:+60163824522" }} className='w-auto zoomin-out shadow-sm shadow-yellow-700 px-3 py-2 tracking-wider italic  bg-yellow-400 text-black text-base md:text-lg font-semibold rounded-md  '>Claim Your Free 20 PSI Gas Top-Up </button>
+                        <p className=' lg:text-center mt-5 text-lg font-semibold text-yellow-400 tracking-wider items-center italic'>✔ 45 Days warranty on water Leaking</p>
                     </div>
                 </div>
             </footer>
