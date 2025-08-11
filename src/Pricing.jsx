@@ -80,8 +80,8 @@ export default function Pricing() {
                                 </div>
                             </div>
 
-                            <div className="mt-6 w-full ">
-                                <button onClick={() => { window.location.href = "tel:+60163824522" }} className="flex btn-wave2 justify-center items-center rounded-md w-auto px-3.5 py-2.5 font-semibold italic tracking-wider mx-auto my-0 bg-yellow-400 shadow-md shadow-gray-400">
+                            <div className="mt-4 flex justify-center w-full ">
+                                <button onClick={() => { window.location.href = "tel:+60163824522" }} className="flex btn-wave2 justify-center items-center rounded-md w-auto px-3.5 py-2.5 font-semibold italic tracking-wider bg-yellow-400 shadow-md shadow-gray-400">
                                     <FaPhoneAlt className="mr-2" />
                                     <span className="btn-wave">
                                         {text.split("").map((letter, index) => (
