@@ -126,7 +126,7 @@ export default function Services() {
                             {/* Title & Description */}
                             <div className="flex-grow">
                                 <h3 className="text-xl font-bold text-gray-800 mt-3">{item.title}</h3>
-                                <p className="mt-2 text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                                <p className="mt-2 text-base  leading-relaxed">{item.description}</p>
                             </div>
 
                             {/* Button */}
