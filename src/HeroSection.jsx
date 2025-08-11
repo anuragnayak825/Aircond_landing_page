@@ -63,7 +63,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-white w-full space-y-3 md:space-y-6 sm:text-left"
           >
-            <div className="text-xs md:text-xl font-semibold capitalize tracking-wider">
+            <div className="text-xs md:text-xl font-semibold capitalize italicssr">
               <h1 className="bg-yellow-300 px-4 py-0.5 rounded-full text-black w-auto justify-self-start">
                 Malaysia’s Most Reliable Aircon Team
               </h1>
@@ -75,7 +75,7 @@ export default function HeroSection() {
               </h1>
             </div>
 
-            <div className="w-full py-1 flex text-sm md:text-lg tracking-wider italic justify-between max-w-md">
+            <div className="w-full py-1 flex text-sm md:text-lg italicssr italicss justify-between max-w-md">
               <p className="flex justify-center items-center gap-1.5">
                 <FaCheckCircle className="text-yellow-400" /> Affordable Rates
               </p>
@@ -83,7 +83,7 @@ export default function HeroSection() {
                 <FaCheckCircle className="text-yellow-400" /> Same-Day Service
               </p>
             </div>
-            <div className="w-full py-1 flex text-sm md:text-lg tracking-wider italic justify-between max-w-md">
+            <div className="w-full py-1 flex text-sm md:text-lg italicssr italicss justify-between max-w-md">
               <p className="flex justify-center items-center gap-1.5">
                 <FaCheckCircle className="text-yellow-400" /> 100% Satisfaction
               </p>
@@ -97,7 +97,7 @@ export default function HeroSection() {
               Aircon not cooling? <br /> <span className="text-white">Don’t sweat it — Certified techs just a click away</span>
             </p>
 
-            <p className="text-sm sm:text-base md:text-lg tracking-wide">
+            <p className="text-sm sm:text-base md:text-lg italicss">
               Trusted by 10k+ KL Homeowners & Businesses.
             </p>
 

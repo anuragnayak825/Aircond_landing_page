@@ -58,7 +58,7 @@ const CoolTechSection = () => {
                 >
                     {/* Heading Label */}
                     <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-start space-x-0 lg:space-x-2 mb-2">
-                        <p className="text-[#ffc513] font-semibold uppercase tracking-wider font-serif text-sm sm:text-base">About Aircond</p>
+                        <p className="text-[#ffc513] font-semibold uppercase italicssr font-serif text-sm sm:text-base">About Aircond</p>
                         <hr className="border border-[#ffc513] w-10 mt-2 lg:mt-1" />
                     </div>
 

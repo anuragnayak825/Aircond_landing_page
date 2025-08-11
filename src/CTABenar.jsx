@@ -22,7 +22,7 @@ export default function CTABanner() {
                 <h2 className="text-xl sm:text-3xl font-bold text-white drop-shadow">
                     Need Aircon Service? We’re Just a Call Away!
                 </h2>
-                <p className="mt-2 text-white font-medium max-w-3xl text-lg md:text-xl italic tracking-wide mx-auto drop-shadow">
+                <p className="mt-2 text-white font-medium max-w-3xl text-lg md:text-xl italicss italicss mx-auto drop-shadow">
                     From quick repairs to full installations, our certified technicians
                     have you covered. Contact us now for a free consultation!
                 </p>

@@ -97,7 +97,7 @@ export default function Header() {
 
 
           </div>
-          <ul className=" hidden xl:flex justify-between text-lg capitalize font-semibold tracking-wide italic space-x-5">
+          <ul className=" hidden xl:flex justify-between text-lg capitalize font-semibold italicss italicss space-x-5">
             {['Residential', 'Commercial'].map((item, idx) => (
               <li
                 key={idx}

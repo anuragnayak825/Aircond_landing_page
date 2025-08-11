@@ -68,13 +68,13 @@ export default function ContactForm2() {
 
     return (
         <div className='w-full max-w-md text-black'>
-            <h1 className='font-thin italic tracking-widest text-white'>Message Us</h1>
+            <h1 className='font-thin italicss italicssst text-white'>Message Us</h1>
 
             {/* Name Input */}
             <input
                 type="text"
                 placeholder='Enter Your Name'
-                className='px-3.5 py-2 border mb-3 italic border-gray-300 mt-2.5 shadow-inner outline-0 bg-white w-full'
+                className='px-3.5 py-2 border mb-3 italicss border-gray-300 mt-2.5 shadow-inner outline-0 bg-white w-full'
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
@@ -91,7 +91,7 @@ export default function ContactForm2() {
                 <input
                     type="tel"
                     placeholder='+60 12-345 6789'
-                    className='pl-12 pr-3 py-2 border italic border-gray-300 shadow-inner outline-0 bg-white w-full'
+                    className='pl-12 pr-3 py-2 border italicss border-gray-300 shadow-inner outline-0 bg-white w-full'
                     value={phone}
                     onChange={handleChange}
                 />
@@ -100,7 +100,7 @@ export default function ContactForm2() {
             {/* Message Textarea */}
             <textarea
                 placeholder='Enter Your Message'
-                className='px-3.5 py-2 border mb-3 italic border-gray-300 shadow-inner outline-0 bg-white w-full'
+                className='px-3.5 py-2 border mb-3 italicss border-gray-300 shadow-inner outline-0 bg-white w-full'
                 rows={4}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -112,7 +112,7 @@ export default function ContactForm2() {
                     type="button"
                     onClick={handleSubmit}
                     disabled={loading}
-                    className="relative overflow-hidden group px-6 py-2 mb-3 border border-gray-300 text-white tracking-widest italic"
+                    className="relative overflow-hidden group px-6 py-2 mb-3 border border-gray-300 text-white italicssst italicss"
                 >
                     <span className="relative group-hover:text-black z-10">
                         {loading ? "Sending..." : "Send"}

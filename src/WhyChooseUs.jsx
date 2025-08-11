@@ -14,10 +14,7 @@ const why = [
     t: "Excellent customer service:",
     p: "Ensures a smooth experience for you and turns you into a repeat customer"
   },
-  {
-    t: "Excellent customer service:",
-    p: "Ensures a smooth experience for you and turns you into a repeat customer"
-  },
+ 
   {
     t: "Trustworthy: ",
     p: "633+ Google Reviews & 4.7 rating"
@@ -31,17 +28,17 @@ export default function WhyChooseUs() {
   return (
     <div className='w-full h-auto bg-gray-100 flex flex-col-reverse lg:flex-row justify-between items-center xl:px-24 px-4 md:px-10 lg:px-10  py-8 gap-10'>
       <div className='lg:w-1/2 w-full h-full flex flex-col items-center lg:items-start  '>
-        <h1 className='text-xl xl:text-4xl font-bold italic tracking-wide'>Why Choose Us for Aircond Service?</h1>
+        <h1 className='text-xl xl:text-4xl font-bold italicss italicss'>Why Choose Us for Aircond Service?</h1>
         <ul className='space-y-5 xl:space-y-9 mt-4 xl:mt-7'>
           {
             why?.map((e) => (
-              <li className='text-base xl:text-2xl  md:list-disc italic tracking-wider '><strong>{e?.t}</strong> {e?.p}</li>
+              <li className='text-base xl:text-2xl  md:list-disc italicss italicssr '><strong>{e?.t}</strong> {e?.p}</li>
             ))
           }
         </ul>
 
 
-        <button onClick={() => { window.location.href = "tel:+60163824522" }} className=' zoomin-out shadow-md shadow-gray-400 w-auto px-3 py-2 rounded-md mt-5 xl:mt-8 my-0 text-base xl:text-xl cursor-pointer  font-semibold italic bg-yellow-400'>Claim Your Free 20 PSI Gas Top-Up</button>
+        <button onClick={() => { window.location.href = "tel:+60163824522" }} className=' zoomin-out shadow-md shadow-gray-400 w-auto px-3 py-2 rounded-md mt-5 xl:mt-8 my-0 text-base xl:text-xl cursor-pointer  font-semibold italicss bg-yellow-400'>Claim Your Free 20 PSI Gas Top-Up</button>
       </div>
       <div className='lg:w-1/2 w-full h-full  '>
         <div className='w-full h-full bg-white'>

@@ -39,7 +39,7 @@ export default function Pricing() {
     ];
     return (
         <section className=' px-4 md:px-10 xl:px-20 py-6'>
-            <div className="text-center mb-6 md:mb-10 italic">
+            <div className="text-center mb-6 md:mb-10 italicss">
                 <h4 className="text-xl md:text-3xl font-bold">Choose Your Comfort Plan</h4>
                 <p className=" text-sm max-w-xl mx-auto mt-3">
                     Transparent pricing for all types of AC units and services. Choose the one that suits your needs best.
@@ -47,7 +47,7 @@ export default function Pricing() {
             </div>
 
             {/* Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 h-auto gap-5 w-full">
                 {plans.map((plan, idx) => (
                     <div
                         key={idx}
@@ -56,10 +56,10 @@ export default function Pricing() {
                         <div className=''>
                             <img src={plan?.img} alt="" className='mx-auto' />
                         </div>
-                        <div className=' '>
+                        <div className=' space-y-7 '>
                             <div className=' xl:flex '>
                                 <div className="  xl:border-e border-e-gray-300 px-4 ">
-                                    <h3 className="text-lg font-bold text-gray-800 mb-4 text-left">{plan.name}</h3>
+                                    <h3 className="text-lg font-bold text-gray-800 mb-4 text-left">{plan.name1}</h3>
                                     <ul className="space-y-3 text-lg text-gray-700">
                                         {plan?.features_Basic?.map((feature, i) => (
                                             <li key={i} className="flex items-center gap-2">
@@ -80,8 +80,8 @@ export default function Pricing() {
                                 </div>
                             </div>
 
-                            <div className="mt-4 flex justify-center w-full ">
-                                <button onClick={() => { window.location.href = "tel:+60163824522" }} className="flex btn-wave2 justify-center items-center rounded-md w-auto px-3.5 py-2.5 font-semibold italic tracking-wider bg-yellow-400 shadow-md shadow-gray-400">
+                            <div className="mt-8 flex justify-center w-full ">
+                                <button onClick={() => { window.location.href = "tel:+60163824522" }} className="flex btn-wave2 justify-center items-center rounded-md w-auto px-3.5 py-2.5 font-semibold italicss italicssr bg-yellow-400 shadow-md shadow-gray-400">
                                     <FaPhoneAlt className="mr-2" />
                                     <span className="btn-wave">
                                         {text.split("").map((letter, index) => (

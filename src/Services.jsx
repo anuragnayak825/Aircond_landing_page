@@ -87,12 +87,12 @@ export default function Services() {
             {/* Heading */}
             <div className='flex flex-col justify-center items-center mb-10'>
                 <div className="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-2 mb-2">
-                    <p className="text-black font-semibold uppercase tracking-wider font-serif text-xl md:text-3xl">
+                    <p className="text-black font-semibold uppercase italicssr font-serif text-xl md:text-3xl">
                         Aircond services
                     </p>
                     <hr className="border border-[#ffc513] w-10 mt-2 lg:mt-1" />
                 </div>
-                <p className='text-sm md:text-lg w-full max-w-3xl font-semibold tracking-wide text-center'>
+                <p className='text-sm md:text-lg w-full max-w-3xl font-semibold italicss text-center'>
                     We provide expert aircon service , repair , maintenance and Installation to keep your system running smoothly, efficiently, and reliably all year round.
                 </p>
             </div>
@@ -135,7 +135,7 @@ export default function Services() {
                                     onClick={() => {
                                         window.location.href = "tel:+60163824522";
                                     }}
-                                    className="bg-[#1574C0] text-white font-medium italic px-5 py-2.5 rounded-full flex items-center hover:bg-[#105b96] transition duration-300"
+                                    className="bg-[#1574C0] text-white font-medium italicss px-5 py-2.5 rounded-full flex items-center hover:bg-[#105b96] transition duration-300"
                                 >
                                     Explore <FaArrowRight className="ml-2" />
                                 </button>

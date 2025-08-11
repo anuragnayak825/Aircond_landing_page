@@ -19,7 +19,7 @@ const Footer = () => {
                     <ContactForm2 />
 
                     {/* Right - Contact Info */}
-                    <div className='w-full max-w-md italic tracking-wider'>
+                    <div className='w-full max-w-md italicss italicssr'>
                         <h3 className="text-white font-semibold text-xl mb-3 flex items-center gap-2">
                             Contact <span className="w-5 h-[2px] bg-yellow-400"></span>
                         </h3>
@@ -41,19 +41,19 @@ const Footer = () => {
                     </div>
 
                     <div className='py-1.5 w-full h-full lg:flex  flex-col items-center '>
-                        <button onClick={() => { window.location.href = "tel:+60163824522" }} className='w-auto zoomin-out shadow-sm shadow-yellow-700 px-3 py-2 tracking-wider italic  bg-yellow-400 text-black text-base md:text-lg font-semibold rounded-md  '>Claim Your Free 20 PSI Gas Top-Up </button>
-                        <p className=' lg:text-center mt-5 text-lg font-semibold text-yellow-400 tracking-wider items-center italic'>✔ 45 Days warranty on water Leaking</p>
+                        <button onClick={() => { window.location.href = "tel:+60163824522" }} className='w-auto zoomin-out shadow-sm shadow-yellow-700 px-3 py-2 italicssr italicss  bg-yellow-400 text-black text-base md:text-lg font-semibold rounded-md  '>Claim Your Free 20 PSI Gas Top-Up </button>
+                        <p className=' lg:text-center mt-5 text-lg font-semibold text-yellow-400 italicssr items-center italicss'>✔ 45 Days warranty on water Leaking</p>
                     </div>
                 </div>
             </footer>
 
             {/* Bottom Bar */}
             <div className='w-full bg-[#051c3a] px-6 sm:px-24 py-4 flex flex-col md:flex-row justify-between items-center gap-4'>
-                <h1 className='text-white text-sm font-thin italic tracking-widest text-center md:text-left'>
+                <h1 className='text-white text-sm font-thin italicss italicssst text-center md:text-left'>
                     © 2025, AC Cool N Cool Engineering. All rights reserved.
                 </h1>
                 <NavLink
-                    className="text-white text-sm font-thin italic tracking-widest hover:underline"
+                    className="text-white text-sm font-thin italicss italicssst hover:underline"
                     to="/privacy-policy"
                 >
                     Privacy Policy

@@ -32,11 +32,11 @@ export default function Residentialandcommericial() {
                             </div>
                         </div>
                         <div className='p-6'>
-                            <h1 className='text-xl md:text-2xl font-bold italic tracking-wide'>Aircon Residential Services</h1>
-                            <p className='text-sm md:text-lg font-normal italic tracking-wider mt-6'>
+                            <h1 className='text-xl md:text-2xl font-bold italicss italicss'>Aircon Residential Services</h1>
+                            <p className='text-sm md:text-lg font-normal italicss italicssr mt-6'>
                                 At AC Cool N Cool Engineering, we understand how essential it is to maintain a comfortable and healthy environment at home—especially in India’s hot and humid climate. Our Residential aircon Services are designed to offer seamless, efficient, and long-lasting cooling for your living spaces.
                             </p>
-                            <a href="tel:+60163824522" className='w-full py-3.5 flex justify-center items-center mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold italic text-lg md:text-xl px-3 rounded-2xl'>
+                            <a href="tel:+60163824522" className='w-full py-3.5 flex justify-center items-center mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold italicss text-lg md:text-xl px-3 rounded-2xl'>
                                 Book Now <FaArrowRightLong className='ml-2.5' />
                             </a>
                         </div>
@@ -70,11 +70,11 @@ export default function Residentialandcommericial() {
                             </div>
                         </div>
                         <div className='p-6'>
-                            <h1 className='text-xl md:text-2xl font-bold italic tracking-wide'>Aircon Commercial Services</h1>
-                            <p className='text-sm md:text-lg font-normal italic tracking-wider mt-6'>
+                            <h1 className='text-xl md:text-2xl font-bold italicss italicss'>Aircon Commercial Services</h1>
+                            <p className='text-sm md:text-lg font-normal italicss italicssr mt-6'>
                                 At AC Cool N Cool Engineering , we help businesses stay cool and productive with reliable aircon. Our commercial aircon services are tailored for offices, showrooms, hotels, and more. We deliver efficient, scalable, and long-lasting cooling solutions for every business need.
                             </p>
-                            <a href="tel:+60163824522" className='w-full py-3.5 flex justify-center items-center mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold italic text-lg md:text-xl px-3 rounded-2xl'>
+                            <a href="tel:+60163824522" className='w-full py-3.5 flex justify-center items-center mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold italicss text-lg md:text-xl px-3 rounded-2xl'>
                                 Book Now <FaArrowRightLong className='ml-2.5' />
                             </a>
                         </div>
