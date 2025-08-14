@@ -38,7 +38,7 @@ export default function WhyChooseUs() {
         </ul>
 
 
-        <button onClick={() => { window.location.href = "tel:+60163824522" }} className=' zoomin-out shadow-md shadow-gray-400 w-auto px-3 py-2 rounded-md mt-5 xl:mt-8 my-0 text-base xl:text-xl cursor-pointer  font-semibold italicss bg-yellow-400'>Claim Your Free 20 PSI Gas Top-Up</button>
+        <button onClick={() => { window.location.href="https://wa.me/60163824522" }} className=' zoomin-out shadow-md shadow-gray-400 w-auto px-3 py-2 rounded-md mt-5 xl:mt-8 my-0 text-base xl:text-xl cursor-pointer  font-semibold italicss bg-yellow-400'>Claim Your Free 20 PSI Gas Top-Up</button>
       </div>
       <div className='lg:w-1/2 w-full h-full  '>
         <div className='w-full h-full bg-white'>

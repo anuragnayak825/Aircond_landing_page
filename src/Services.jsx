@@ -133,7 +133,7 @@ export default function Services() {
                             <div className="mt-6">
                                 <button
                                     onClick={() => {
-                                        window.location.href = "tel:+60163824522";
+                                        window.location.href = "https://wa.me/60163824522";
                                     }}
                                     className="bg-[#1574C0] text-white font-medium italicss px-5 py-2.5 rounded-full flex items-center hover:bg-[#105b96] transition duration-300"
                                 >

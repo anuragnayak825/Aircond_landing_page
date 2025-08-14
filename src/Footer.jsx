@@ -41,7 +41,7 @@ const Footer = () => {
                     </div>
 
                     <div className='py-1.5 w-full h-full lg:flex  flex-col items-center '>
-                        <button onClick={() => { window.location.href = "tel:+60163824522" }} className='w-auto zoomin-out shadow-sm shadow-yellow-700 px-3 py-2 italicssr italicss  bg-yellow-400 text-black text-base md:text-lg font-semibold rounded-md  '>Claim Your Free 20 PSI Gas Top-Up </button>
+                        <button onClick={() => { window.location. href="https://wa.me/60163824522" }} className='w-auto zoomin-out shadow-sm shadow-yellow-700 px-3 py-2 italicssr italicss  bg-yellow-400 text-black text-base md:text-lg font-semibold rounded-md  '>Claim Your Free 20 PSI Gas Top-Up </button>
                         <p className=' lg:text-center mt-5 text-lg font-semibold text-yellow-400 italicssr items-center italicss'>✔ 45 Days warranty on water Leaking</p>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ const Footer = () => {
                 </h1>
                 <NavLink
                     className="text-white text-sm font-thin italicss italicssst hover:underline"
-                    to="/privacy-policy"
+                    to="/kuala-lumpur/privacy-policy"
                 >
                     Privacy Policy
                 </NavLink>

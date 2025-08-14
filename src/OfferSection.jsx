@@ -26,7 +26,7 @@ export default function CombinedServicesAndOffer() {
           </p>
           <div className="flex justify-center mt-5">
             <button
-              onClick={() => (window.location.href = "tel:+60163824522")}
+              onClick={() => (window.location.href="https://wa.me/60163824522")}
               className="px-3 py-3 rounded-xl text-black zoomin-out font-bold bg-gradient-to-r from-[#f49934] to-[#ffab18] shadow-lg hover:scale-105 transition-transform duration-300 flex items-center gap-2"
             >
               <FaBolt className="text-white drop-shadow" />

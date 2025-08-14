@@ -5,6 +5,7 @@ import logo from './assets/logo-ac.webp';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Header() {
+  const nav = useNavigate()
   const location = useLocation()
   const [isPrivacy, setisPrivacy] = useState(false)
 
@@ -44,7 +45,7 @@ export default function Header() {
               src={logo}
               alt="Cool N Cool Logo"
               className="w-[90px] h-[90px]  drop-shadow-md cursor-pointer"
-              onClick={() => { location.pathname.startsWith('/privacy-policy') && window.history.back() }}
+              onClick={() => nav('/kuala-lumpur/')}
             />
 
           </div>

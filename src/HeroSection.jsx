@@ -105,15 +105,11 @@ export default function HeroSection() {
               onClick={() => {
                 window.location.href = "tel:+60163824522";
               }}
-              className="relative mt-2 px-6 py-3 border border-white text-white font-semibold hover:border-blue-700 rounded shadow transition duration-300 text-sm sm:text-base overflow-hidden group"
+              className="relative mt-2 px-6 py-3 border border-blue-700 text-white font-semibold bg-blue-700 hover:border-blue-800 hover:bg-blue-800 cursor-pointer  rounded shadow-md  transition duration-300 text-sm sm:text-base overflow-hidden group"
             >
               <span className="relative z-10">Call a Technician Now  →</span>
 
               {/* Left Side Overlay */}
-              <span className="absolute inset-y-0 left-1/2 w-0 group-hover:w-1/2  bg-blue-700 transition-all duration-300 origin-left"></span>
-
-              {/* Right Side Overlay */}
-              <span className="absolute inset-y-0 right-1/2 w-0 group-hover:w-1/2 bg-blue-700 transition-all duration-300 origin-right"></span>
             </button>
 
           </motion.div>

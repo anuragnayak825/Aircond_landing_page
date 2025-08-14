@@ -51,19 +51,28 @@ export default function ContactForm() {
     }
 
     setLoading(true);
-    const queryString = new URLSearchParams(formData).toString();
 
     try {
-      await fetch(
-        `https://script.google.com/macros/s/AKfycbx_wrUZGEGspgPNSA22uCK_Cu70gejhyKQYF2nZPgWn2TbHShgIVYQjBrwO3oRA3wmR/exec?${queryString}`,
-        {
-          method: "GET",
-          mode: "no-cors",
-        }
-      );
+      const response = await fetch("https://www.accoolncool.com/kuala-lumpur/contact-handler.php", {
+        method: "POST",
+        body: formData
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        setLoading(false);
+        nav("/kuala-lumpur/thank-you"); // Or any thank you page
+      } else {
+        console.log(result)
+        alert("There was an error sending your message. Please try again.");
+        setLoading(false);
+      }
+
+
       setLoading(false);
-      nav("/thank-you");
+      nav("/kuala-lumpur/");
     } catch (error) {
+      console.log(error.message, error)
       alert("There was an error sending your message. Please try again.");
       setLoading(false);
     }
@@ -136,9 +145,8 @@ export default function ContactForm() {
         type="submit"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95, rotateX: 10 }}
-        className={`w-full mt-3.5 px-6 py-3 ${
-          loading ? "bg-gray-500 cursor-not-allowed" : "bg-blue-700 hover:bg-blue-800"
-        } text-white font-semibold rounded-md shadow-md transition`}
+        className={`w-full mt-3.5 px-6 py-3 ${loading ? "bg-gray-500 cursor-not-allowed" : "bg-blue-700 hover:bg-blue-800"
+          } text-white font-semibold rounded-md shadow-md transition`}
         disabled={loading}
       >
         {loading ? "Sending..." : "Submit"}

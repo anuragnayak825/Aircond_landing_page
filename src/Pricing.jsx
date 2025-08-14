@@ -1,8 +1,8 @@
 import React from 'react'
-import { FaPhoneAlt } from 'react-icons/fa';
+import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 
 export default function Pricing() {
-    const text = "Call Now For More Information";
+    const text = "Now – Get the Details!";
 
     const plans = [
         {
@@ -81,20 +81,15 @@ export default function Pricing() {
                             </div>
 
                             <div className="mt-8 flex justify-center w-full ">
-                                <button onClick={() => { window.location.href = "tel:+60163824522" }} className="flex btn-wave2 justify-center items-center rounded-md w-auto px-3.5 py-2.5 font-semibold italicss italicssr bg-yellow-400 shadow-md shadow-gray-400">
-                                    <FaPhoneAlt className="mr-2" />
+                                <button onClick={() => { window.location.href = "https://wa.me/60163824522" }} className="flex btn-wave2 justify-center items-center rounded-md w-auto px-3.5 py-2.5 font-semibold italicss italicssr text-white bg-green-600 shadow-md shadow-gray-400">
+                                    <FaWhatsapp className="mr-2 text-2xl" />
                                     <span className="btn-wave">
                                         {text.split("").map((letter, index) => (
                                             <span key={index} style={{ "--i": index }}>{letter}</span>
                                         ))}
                                     </span>
                                 </button>
-                                {/* <a
-                                   
-                                    className="w-auto mx-auto bg-blue-100 text-blue-700 py-2 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 hover:bg-blue-200 transition"
-                                >
-                                    <FaPhoneAlt /> Call Now
-                                </a> */}
+
                             </div>
                         </div>
                     </div>

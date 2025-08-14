@@ -44,6 +44,7 @@ const LocationGrid = () => {
         {visibleLocations.map((location, index) => (
           <div
             key={index}
+            onClick={()=>{window.location.href="https://wa.me/60163824522"}}
             className="bg-white hover:text-yellow-500 transition-all hover:translate-x-2  transform  flex items-center italicss text-blue-900 text-sm md:text-base font-medium px-4 py-2 rounded shadow-md cursor-pointer duration-200"
           >
             <FaLocationArrow className=" hidden sm:block mr-2.5 " /> {location}
