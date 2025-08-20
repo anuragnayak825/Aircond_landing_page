@@ -18,7 +18,14 @@ export default function Pricing() {
                 { name: "1 Unit – RM 150", included: true },
                 { name: "2 Units – RM 130 each", included: true },
                 { name: "3 Units  – RM 120 each", included: true },
+                { name: "4 Units  – RM 110 each", included: true },
+                { name: "4 Units & above – RM 100 each", included: true },
             ],
+            Commer_features_Chemical: [
+                { name: "RM 150 each", included: true },
+
+            ],
+
         },
         {
             img: 'https://raisingwebsolutions.co.in/fast-aircon-landing/images/cassetter.webp',
@@ -33,7 +40,12 @@ export default function Pricing() {
             features_Chemical: [
                 { name: "1 Unit – RM 300", included: true },
                 { name: "2 Units – RM 280 each", included: true },
-                { name: "3 Units & above – RM 260 each", included: true },
+                { name: "3 Units – RM 260 each", included: true },
+            ],
+            Commer_features_Chemical: [
+                { name: "1 Unit – RM 380", included: true },
+                { name: "2 Units – RM 360  each", included: true },
+                { name: "3 Units – RM 350  each", included: true },
             ],
         },
     ];
@@ -69,9 +81,21 @@ export default function Pricing() {
                                     </ul>
                                 </div>
                                 <div className=" px-4 mt-2.5 xl:mt-0">
-                                    <h3 className="text-lg font-bold text-gray-800 mb-4 text-left">{plan.name}</h3>
+                                    <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">{plan.name}</h3>
+                                    <p className='text-sm font-semibold tracking-wider text-blue-600 mb-4 underline'>RESIDENTIAL LOT :</p>
                                     <ul className="space-y-3 text-lg text-gray-700">
                                         {plan?.features_Chemical?.map((feature, i) => (
+                                            <li key={i} className="flex items-center gap-2">
+                                                ✅ {feature.name}
+                                            </li>
+                                        ))}
+                                    </ul>
+
+                                    {/* <p className='text-sm font-semibold tracking-wider text-blue-600 mb-4 underline my-3'>COMMERCIAL LOT :</p> */}
+                                    <p className='text-sm font-semibold tracking-wider text-blue-600 mb-4 underline my-3'>{idx == 0 ? "COMMERCIAL LOT :" : 'COMMERCIAL LOT UP To 3.0HP'}</p>
+
+                                    <ul className="space-y-3 text-lg text-gray-700">
+                                        {plan?.Commer_features_Chemical?.map((feature, i) => (
                                             <li key={i} className="flex items-center gap-2">
                                                 ✅ {feature.name}
                                             </li>

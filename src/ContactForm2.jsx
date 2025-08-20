@@ -70,16 +70,13 @@ export default function ContactForm2() {
       formData.append("phone", phone);
       formData.append("message", message);
 
-      const response = await fetch(
-        "https://www.accoolncool.com/kuala-lumpur/contact-handler.php",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
-
+      const response = await fetch("/kuala-lumpur/contact-handler.php", {
+        method: "POST",
+       
+        body: formData
+      });
       const result = await response.json();
-
+      console.log(result)
       if (result.success) {
         setLoading(false);
         nav("/kuala-lumpur/thank-you");

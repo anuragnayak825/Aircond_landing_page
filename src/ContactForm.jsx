@@ -51,26 +51,39 @@ export default function ContactForm() {
     }
 
     setLoading(true);
-
+    console.log(formData.Address)
     try {
-      const response = await fetch("https://www.accoolncool.com/kuala-lumpur/contact-handler.php", {
+
+      const fd = new FormData();
+      fd.append("name", formData.Name);
+      fd.append("phone", formData["Phone no"]);
+      fd.append("address", formData.Address);
+      fd.append("message", formData.Message);
+
+      console.log(fd)
+      const response = await fetch("/kuala-lumpur/contact-handler.php", {
         method: "POST",
-        body: formData
+        body: fd,
       });
       const result = await response.json();
+
 
       if (result.success) {
         setLoading(false);
         nav("/kuala-lumpur/thank-you"); // Or any thank you page
+        setFormData(
+          {
+            Name: "",
+            "Phone no": "",
+            Address: "",
+            Message: "",
+          }
+        )
       } else {
         console.log(result)
         alert("There was an error sending your message. Please try again.");
         setLoading(false);
       }
-
-
-      setLoading(false);
-      nav("/kuala-lumpur/");
     } catch (error) {
       console.log(error.message, error)
       alert("There was an error sending your message. Please try again.");
@@ -111,6 +124,7 @@ export default function ContactForm() {
               </div>
               <input
                 type="tel"
+                name="phone"
                 placeholder="Phone no"
                 value={formData[name]}
                 onFocus={() => setFocusedField(name)}

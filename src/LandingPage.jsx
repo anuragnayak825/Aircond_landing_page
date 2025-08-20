@@ -21,6 +21,10 @@ import Pricing from './Pricing'
 import CTABenar from './CTABenar'
 export default function LandingPage() {
 
+   useEffect(() => {
+          window.scrollTo(0, 0); // scroll to top when component mounts
+      }, []);
+
   return (
     <>
       <Header />

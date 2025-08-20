@@ -24,6 +24,10 @@ const ThankYou = () => {
         window.history.back();
     };
 
+    useEffect(() => {
+        window.scrollTo(0, 0); // scroll to top when component mounts
+    }, []);
+
     return (
         <>
             <Header />
@@ -71,7 +75,7 @@ const ThankYou = () => {
                     Thank You!
                 </h1>
                 <p className="mt-2 text-xl text-gray-700 mb-6">
-                   Thank you for reaching out! Our team will get back to you as soon as possible.
+                    Thank you for reaching out! Our team will get back to you as soon as possible.
                 </p>
 
                 <button
