@@ -72,18 +72,18 @@ export default function ContactForm2() {
 
       const response = await fetch("/kuala-lumpur/contact-handler.php", {
         method: "POST",
-       
+
         body: formData
       });
-      const result = await response.json();
-      console.log(result)
-      if (result.success) {
-        setLoading(false);
-        nav("/kuala-lumpur/thank-you");
-      } else {
-        setError("Error sending message. Please try again.");
-        setLoading(false);
-      }
+      // const result = await response.json();
+      // console.log(result)
+      // if (result.success) {
+      //   setLoading(false);
+      //   nav("/kuala-lumpur/thank-you");
+      // } else {
+      //   setError("Error sending message. Please try again.");
+      //   setLoading(false);
+      // }
     } catch (error) {
       alert("Error sending message.");
       setLoading(false);
@@ -91,7 +91,10 @@ export default function ContactForm2() {
   };
 
   return (
-    <div className="w-full max-w-md text-black">
+    <form
+      action={`https://www.accoolncool.com/kuala-lumpur/contact-handler.php`}
+      method="post"
+      className="w-full max-w-md text-black">
       <h1 className="font-thin italicss italicssst text-white">Message Us</h1>
 
       {error && (
@@ -104,6 +107,7 @@ export default function ContactForm2() {
       <input
         type="text"
         placeholder="Enter Your Name"
+        name="name"
         className="px-3.5 py-2 border mb-3 italicss border-gray-300 mt-2.5 shadow-inner outline-0 bg-white w-full"
         value={name}
         onChange={(e) => setName(e.target.value)}
@@ -120,6 +124,7 @@ export default function ContactForm2() {
         </span>
         <input
           type="tel"
+          name="phone"
           placeholder="+60 12-345 6789"
           className="pl-12 pr-3 py-2 border italicss border-gray-300 shadow-inner outline-0 bg-white w-full"
           value={phone}
@@ -130,6 +135,7 @@ export default function ContactForm2() {
       {/* Message */}
       <textarea
         placeholder="Enter Your Message"
+        name="message"
         className="px-3.5 py-2 border mb-3 italicss border-gray-300 shadow-inner outline-0 bg-white w-full"
         rows={4}
         value={message}
@@ -139,8 +145,8 @@ export default function ContactForm2() {
       {/* Button */}
       <div className="w-full flex justify-start items-center">
         <button
-          type="button"
-          onClick={handleSubmit}
+          type="submit"
+          // onClick={handleSubmit}
           disabled={loading}
           className={`relative overflow-hidden group px-6 py-2 mb-3 border border-gray-300 text-white italicssst italicss ${loading ? "opacity-60 cursor-not-allowed" : ""
             }`}
@@ -151,6 +157,6 @@ export default function ContactForm2() {
           <span className="absolute inset-0 bg-yellow-400 scale-0 group-hover:scale-100 origin-bottom-left transition-transform duration-500 ease-in-out z-0"></span>
         </button>
       </div>
-    </div>
+    </form>
   );
 }

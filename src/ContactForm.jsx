@@ -50,7 +50,7 @@ export default function ContactForm() {
       return;
     }
 
-    setLoading(true);
+    // setLoading(true);
     console.log(formData.Address)
     try {
 
@@ -65,25 +65,25 @@ export default function ContactForm() {
         method: "POST",
         body: fd,
       });
-      const result = await response.json();
+      // const result = await response.json();
 
-
-      if (result.success) {
-        setLoading(false);
-        nav("/kuala-lumpur/thank-you"); // Or any thank you page
-        setFormData(
-          {
-            Name: "",
-            "Phone no": "",
-            Address: "",
-            Message: "",
-          }
-        )
-      } else {
-        console.log(result)
-        alert("There was an error sending your message. Please try again.");
-        setLoading(false);
-      }
+      // console.log(result)
+      // if (result.success) {
+      //   setLoading(false);
+      //   nav("/kuala-lumpur/thank-you"); // Or any thank you page
+      //   setFormData(
+      //     {
+      //       Name: "",
+      //       "Phone no": "",
+      //       Address: "",
+      //       Message: "",
+      //     }
+      //   )
+      // } else {
+      //   console.log(result)
+      //   alert("There was an error sending your message. Please try again.");
+      //   setLoading(false);
+      // }
     } catch (error) {
       console.log(error.message, error)
       alert("There was an error sending your message. Please try again.");
@@ -93,7 +93,9 @@ export default function ContactForm() {
 
   return (
     <motion.form
-      onSubmit={onSubmit}
+      action={`https://www.accoolncool.com/kuala-lumpur/contact-handler.php`}
+      method="post"
+      // onSubmit={onSubmit}
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -145,6 +147,7 @@ export default function ContactForm() {
             <input
               type={type}
               placeholder={name}
+              name={name.toLowerCase()}
               value={formData[name]}
               onFocus={() => setFocusedField(name)}
               onBlur={() => setFocusedField("")}

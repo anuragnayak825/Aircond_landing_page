@@ -21,7 +21,7 @@ const ThankYou = () => {
     }, []);
 
     const handleGoBack = () => {
-        window.history.back();
+        window.location.href = '/kuala-lumpur/';
     };
 
     useEffect(() => {
