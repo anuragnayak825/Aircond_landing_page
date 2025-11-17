@@ -81,7 +81,7 @@ export default function Pricing() {
                                         ))}
                                     </ul>
 
-                                    <p className='text-xl font-semibold text-gray-700 mt-4  gap-2 '>✅ 45-day warranty on water leakage</p>
+                                    {/* <p className='text-xl font-semibold text-gray-700 mt-4  gap-2 '>✅ 45-day warranty on water leakage</p> */}
 
                                 </div>
                                 <div className=" px-4 mt-2.5 xl:mt-0">
@@ -94,6 +94,7 @@ export default function Pricing() {
                                             </li>
                                         ))}
                                     </ul>
+                                    <p className='text-xl font-semibold text-gray-700 mt-4  gap-2 '>✅ 45-day warranty on water leakage</p>
 
                                     {/* <p className='text-sm font-semibold tracking-wider text-blue-600 mb-4 underline my-3'>COMMERCIAL LOT :</p> */}
                                     <p className='text-sm font-semibold tracking-wider text-blue-600 underline mt-3 mb-1'>{idx == 0 ? "COMMERCIAL LOT :" : 'COMMERCIAL LOT UP To 3.0HP'}</p>
@@ -108,7 +109,7 @@ export default function Pricing() {
                                 </div>
                             </div>
 
-                            <div className="mt-8 flex justify-center w-full ">
+                            <div className="mt-8 flex justify-center w-full jshdgdhg ">
                                 <button onClick={() => { window.location.href = "https://wa.me/60163824522" }} className="flex btn-wave2 justify-center items-center rounded-md w-auto px-3.5 py-2.5 font-semibold italicss italicssr text-white bg-green-600 shadow-md shadow-gray-400">
                                     <FaWhatsapp className="mr-2 text-2xl" />
                                     <span className="btn-wave">
@@ -123,7 +124,6 @@ export default function Pricing() {
                     </div>
                 ))}
             </div>
-
         </section>
     )
 }
